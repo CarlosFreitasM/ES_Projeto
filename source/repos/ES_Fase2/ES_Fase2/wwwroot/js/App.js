@@ -6,11 +6,11 @@ import {
     Route
 } from "react-router-dom";
 
-import Home from './routes/Home/Home';
-import Categorias from './routes/Categorias/Categorias';
-import Votar from './routes/Votar/Votar';
-import SignIn from './routes/SignIn/SignIn';
-import Login from './routes/Login/Login'
+import Home from './Home';
+import Categorias from './Categorias';
+import Votar from './Votar';
+import SignIn from './SignIn';
+import Login from './Login'
 
 export default class App extends Component {
     static displayName = App.name;
