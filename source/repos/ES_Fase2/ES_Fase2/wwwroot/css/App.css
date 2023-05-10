@@ -1,0 +1,174 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.header {
+  height: 100vh;
+  width: 100%;
+  padding: 0 8%;
+  background: #080008;
+  position: relative
+}
+
+.header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header .nav-links{
+  padding: 28px 0;
+}
+
+.header .nav-links li{
+  display: inline-block;
+  margin: 0 15px;
+}
+
+.header .nav-links li a {
+  text-decoration: none;
+  color:#fff;
+  padding: 5px 0;
+  position:relative;
+}
+
+.header .nav-links li a::after{
+  content:'';
+  background: #ff3d00;
+  width: 100%;
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.header .nav-links li a:hover::after{
+  width: 100%;
+  
+}
+
+.logo{
+  width: 64px;
+  height: 64px;
+}
+
+.search{
+  width: 16px;
+  height: 16px;
+}
+
+.Rectangle{
+  position: absolute;
+  height: 100%;
+  width: 1200px;
+  box-shadow: 1px 1px 5px rgb(255, 255, 255);
+  box-shadow: 1px 1px 5px black;
+  left: 50%;
+  margin-left: -600px;
+  background-image: url("/public/oscares.jpg");
+}
+
+.caroussel{
+  height: 450px;
+  width: 80%;
+  position: absolute;
+  transform: translate(12%, 5%);
+  margin: auto;
+  box-shadow: 1px 1px 5px black;
+}
+ .searchheader{
+  transform: translate(-0%, 25%);
+  width: 550px;
+ }
+
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+#content-wrap {
+  padding-bottom: 70px;    /* Footer height */
+}
+
+#sticky-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 70px;            /* Footer height */
+}
+
+.signinform{
+  position: absolute;
+  width: 400px;
+  height: 470px;   
+  top: 50%;
+  left: 50%;
+  margin-top: -220px;
+  margin-left: -200px;
+  box-shadow: 1px 1px 5px black;
+  background-color: #282c34;
+  border-radius: 25px;
+  padding: 20px;
+}
+
+.loginform {
+    position: absolute;
+    width: 400px;
+    height: 300px;
+    top: 50%;
+    left: 50%;
+    margin-top: -140px;
+    margin-left: -200px;
+    box-shadow: 1px 1px 5px black;
+    background-color: #282c34;
+    border-radius: 25px;
+    padding: 20px;
+}
+
+.signinform h1{
+  color:#ffffffbe;
+}
+
+.loginform h1 {
+    color: #ffffffbe;
+}
+
+.nomesnavbar{
+  margin-left: 20px;
+  margin-top: 20px;
+}
