@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\ES_Fase2.props" />
+</Project>
