@@ -16,11 +16,13 @@ namespace Projeto_ESFase2.Data
 
         public DbSet<Projeto_ESFase2.Models.User> Users { get; set; } 
         public DbSet<Projeto_ESFase2.Models.Competition> Competitions { get; set; }
+        public DbSet<Projeto_ESFase2.Models.Nominee> Nominee { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<User>().ToTable("User");
             modelBuilder.Entity<Competition>().ToTable("Competition");
+            modelBuilder.Entity<Nominee>().ToTable("Nominee");
 
         }
     }

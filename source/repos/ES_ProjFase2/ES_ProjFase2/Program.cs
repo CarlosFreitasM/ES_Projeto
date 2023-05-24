@@ -11,7 +11,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.Configure<ESDatabaseSettings>(
     builder.Configuration.GetSection("CategoriesDB"));
 
-builder.Services.AddSingleton<UserService>();
+builder.Services.AddSingleton<UsersService>();
 // Add services to the container.
 //var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
 //builder.Services.AddDbContext<ApplicationDbContext>(options =>
@@ -42,8 +42,6 @@ app.UseStaticFiles();
 app.UseRouting();
 
 app.UseAuthentication();
-app.UseAuthorization();
 
-app.MapRazorPages();
 
 app.Run();

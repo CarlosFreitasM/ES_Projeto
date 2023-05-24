@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "XbUT57f0wyCH9P9KHvAH4lY9HmzUb/4fLdayGkB2j9NaJUcF2vU3fuiCvcop2qdKgfZfdMbp0WtfgmFZSFISNw==",
+  "dgSpecHash": "PpwcYcFV5hXNUtXhwydBq7iKmskkPXKP1HbwA8ntCbrwqYLz6DWxzjZ0S8g0JUsXyU6lgA83FOekRQiuWc2miA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Carlos Marques\\source\\repos\\Projeto_ESFase2\\Projeto_ESFase2\\Projeto_ESFase2.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Carlos Marques\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\Carlos Marques\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
+    "C:\\Users\\Carlos Marques\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\Carlos Marques\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Carlos Marques\\.nuget\\packages\\microsoft.aspnetcore.diagnostics.entityframeworkcore\\7.0.5\\microsoft.aspnetcore.diagnostics.entityframeworkcore.7.0.5.nupkg.sha512",
     "C:\\Users\\Carlos Marques\\.nuget\\packages\\microsoft.aspnetcore.razor.language\\6.0.11\\microsoft.aspnetcore.razor.language.6.0.11.nupkg.sha512",

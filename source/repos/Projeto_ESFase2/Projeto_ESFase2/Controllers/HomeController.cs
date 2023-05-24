@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using Projeto_ESFase2.Models;
 using System.Diagnostics;
 
@@ -7,6 +8,7 @@ namespace Projeto_ESFase2.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly UserManager<User> _userManager;
 
         public HomeController(ILogger<HomeController> logger)
         {
@@ -15,6 +17,7 @@ namespace Projeto_ESFase2.Controllers
 
         public IActionResult Index()
         {
+            
             return View();
         }
 

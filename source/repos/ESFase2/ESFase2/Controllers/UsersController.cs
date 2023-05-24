@@ -33,7 +33,7 @@ namespace ESFase2.Controllers
         [HttpPost]
         public async Task<IActionResult> Post(User newUser)
         {
-            await _usersService.CreateAsync(newUser);
+            await _usersService.CreateUser(newUser);
 
             return CreatedAtAction(nameof(Get), new { id = newUser.Id }, newUser);
         }

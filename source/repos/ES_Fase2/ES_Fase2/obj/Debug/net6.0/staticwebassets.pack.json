@@ -5,12 +5,60 @@
       "PackagePath": "staticwebassets\\ES_Fase2.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\Carlos Marques\\source\\repos\\ES_Fase2\\ES_Fase2\\wwwroot\\css\\App.css",
+      "PackagePath": "staticwebassets\\css\\App.css"
+    },
+    {
       "Id": "C:\\Users\\Carlos Marques\\source\\repos\\ES_Fase2\\ES_Fase2\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
       "Id": "C:\\Users\\Carlos Marques\\source\\repos\\ES_Fase2\\ES_Fase2\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\Carlos Marques\\source\\repos\\ES_Fase2\\ES_Fase2\\wwwroot\\js\\App.js",
+      "PackagePath": "staticwebassets\\js\\App.js"
+    },
+    {
+      "Id": "C:\\Users\\Carlos Marques\\source\\repos\\ES_Fase2\\ES_Fase2\\wwwroot\\js\\Caroussel.js",
+      "PackagePath": "staticwebassets\\js\\Caroussel.js"
+    },
+    {
+      "Id": "C:\\Users\\Carlos Marques\\source\\repos\\ES_Fase2\\ES_Fase2\\wwwroot\\js\\Categorias.js",
+      "PackagePath": "staticwebassets\\js\\Categorias.js"
+    },
+    {
+      "Id": "C:\\Users\\Carlos Marques\\source\\repos\\ES_Fase2\\ES_Fase2\\wwwroot\\js\\Footer.js",
+      "PackagePath": "staticwebassets\\js\\Footer.js"
+    },
+    {
+      "Id": "C:\\Users\\Carlos Marques\\source\\repos\\ES_Fase2\\ES_Fase2\\wwwroot\\js\\Header.js",
+      "PackagePath": "staticwebassets\\js\\Header.js"
+    },
+    {
+      "Id": "C:\\Users\\Carlos Marques\\source\\repos\\ES_Fase2\\ES_Fase2\\wwwroot\\js\\Home.js",
+      "PackagePath": "staticwebassets\\js\\Home.js"
+    },
+    {
+      "Id": "C:\\Users\\Carlos Marques\\source\\repos\\ES_Fase2\\ES_Fase2\\wwwroot\\js\\Login.js",
+      "PackagePath": "staticwebassets\\js\\Login.js"
+    },
+    {
+      "Id": "C:\\Users\\Carlos Marques\\source\\repos\\ES_Fase2\\ES_Fase2\\wwwroot\\js\\LoginForm.js",
+      "PackagePath": "staticwebassets\\js\\LoginForm.js"
+    },
+    {
+      "Id": "C:\\Users\\Carlos Marques\\source\\repos\\ES_Fase2\\ES_Fase2\\wwwroot\\js\\SignIn.js",
+      "PackagePath": "staticwebassets\\js\\SignIn.js"
+    },
+    {
+      "Id": "C:\\Users\\Carlos Marques\\source\\repos\\ES_Fase2\\ES_Fase2\\wwwroot\\js\\SignInForm.js",
+      "PackagePath": "staticwebassets\\js\\SignInForm.js"
+    },
+    {
+      "Id": "C:\\Users\\Carlos Marques\\source\\repos\\ES_Fase2\\ES_Fase2\\wwwroot\\js\\Votar.js",
+      "PackagePath": "staticwebassets\\js\\Votar.js"
     },
     {
       "Id": "C:\\Users\\Carlos Marques\\source\\repos\\ES_Fase2\\ES_Fase2\\wwwroot\\js\\site.js",

@@ -5,11 +5,11 @@ namespace Projeto_ESFase2.Models
 {
     public class Competition
     {
-        public string CompetitionId { get; set; }
+        public int Id { get; set; }
 
-        public string CompetitionName { get; set; }
+        public string Name { get; set; }
 
-        public string CompetitionCategory { get; set;}
+        public string Category { get; set;}
 
         public long NumberVotes { get; set; }
 
@@ -17,7 +17,9 @@ namespace Projeto_ESFase2.Models
 
         public DateTime StartingTime { get; set; }
 
-        public List<User> Users { get; } = new();
+        public List<User> User { get; } = new();
+
+        public List<Nominee> Nominee { get; } = new();
 
 
     }
