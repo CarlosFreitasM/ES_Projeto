@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Http.Connections;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Infrastructure;
 using Projeto_ESFase2.Data;
 using Projeto_ESFase2.Models;
 using Projeto_ESFase2.Services;
@@ -23,6 +24,7 @@ namespace Projeto_ESFase2.Controllers
 
             
             return View(_context.Competitions.ToList());
+          
         }
 
         // GET: CompetitionController/Details/5
@@ -34,6 +36,16 @@ namespace Projeto_ESFase2.Controllers
         // GET: CompetitionController/Create
         public ActionResult Create()
         {
+
+            List<Nominee> nominees = new List<Nominee>();
+            var listNominee = _context.Nominee.ToList();
+            foreach (var nominee in listNominee)
+            {
+                nominees.Add(nominee);
+            }
+
+            ViewBag.nominee = nominees;
+
             return View();
         }
 
@@ -44,12 +56,13 @@ namespace Projeto_ESFase2.Controllers
         {
 
             var iterateCompetition = await _context.Competitions.ToListAsync();
+            var iterateNominee = competition.Nominee;
 
             if (ModelState.IsValid)
             {
                 foreach (var item in iterateCompetition)
                 {
-                    if (competition.Name == item.Name || competition.Category == item.Category)
+                    if (competition.Name == item.Name || competition.Category == item.Category )
                     {
                         ViewData["Error"] = "Ja existe uma competição com este nome ou categoria";
                         return View();
@@ -57,10 +70,11 @@ namespace Projeto_ESFase2.Controllers
                 }
                 _context.Add(competition);
                 await _context.SaveChangesAsync();
+                
                 return RedirectToAction("Index", "Competition");
             }
             ViewData["Error"] = "Algo correu errado";
-            return View();
+            return View(_context.Competitions.ToList());
         }
 
         // GET: CompetitionController/Edit/5
@@ -108,6 +122,20 @@ namespace Projeto_ESFase2.Controllers
             {
                 return View();
             }
+        }
+
+        public List<GroupedNominee> Showgroup()
+        {
+            List<Nominee> items = _context.Nominee.ToList();
+
+            var groupedItems = items.GroupBy(x => x.Type)
+                                    .Select(g => new GroupedNominee
+                                    {
+                                        NomineeType = g.Key,   
+                                        Items = g.ToList()
+                                    })
+                                    .ToList();
+            return groupedItems;
         }
     }
 }

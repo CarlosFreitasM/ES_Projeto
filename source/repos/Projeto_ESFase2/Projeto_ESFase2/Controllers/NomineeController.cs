@@ -1,14 +1,25 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using Projeto_ESFase2.Data;
+using Projeto_ESFase2.Models;
 
 namespace Projeto_ESFase2.Controllers
 {
     public class NomineeController : Controller
     {
+
+        private readonly ES2Context _context;
+
+        public NomineeController(ES2Context context)
+        {
+            _context = context;
+
+        }
         // GET: NomineeController
         public ActionResult Index()
         {
-            return View();
+            return View(_context.Nominee.ToList());
         }
 
         // GET: NomineeController/Details/5
@@ -26,16 +37,27 @@ namespace Projeto_ESFase2.Controllers
         // POST: NomineeController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public async Task<ActionResult> Create([FromForm] Nominee nominee)
         {
-            try
+            var iterateNominee = await _context.Nominee.ToListAsync();
+
+            if (ModelState.IsValid)
             {
-                return RedirectToAction(nameof(Index));
+                foreach (var item in iterateNominee)
+                {
+                    if (nominee.Name.ToLower() == item.Name.ToLower())
+                    {
+                        ViewData["Error"] = "Ja existe um nominee com este nome";
+                        return View();
+                    }
+                }
+                _context.Add(nominee);
+                await _context.SaveChangesAsync();
+
+                return RedirectToAction("Index", "Nominee");
             }
-            catch
-            {
-                return View();
-            }
+            ViewData["Error"] = "Algo correu errado";
+            return View();
         }
 
         // GET: NomineeController/Edit/5

@@ -12,8 +12,8 @@ using Projeto_ESFase2.Data;
 namespace Projeto_ESFase2.Migrations
 {
     [DbContext(typeof(ES2Context))]
-    [Migration("20230524135555_FifthMigration")]
-    partial class FifthMigration
+    [Migration("20230527124819_InitialCreate")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

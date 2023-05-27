@@ -1,0 +1,23 @@
+﻿@model IEnumerable<Projeto_ESFase2.Models.GroupedNominee>
+
+@{
+    ViewData["Title"] = "Showgroup";
+}
+
+<h1>Showgroup</h1>
+
+
+
+<select id="selectNominee">
+    <option value="">Select Nominees</option>
+    @foreach (var group in Model)
+    {
+        <optgroup label="@group.NomineeType">
+            @foreach (var item in group.Items)
+            {
+                <option value="@item.Id">@item.Name</option>
+            }
+        </optgroup>
+
+    }
+</select>

@@ -40,12 +40,24 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGV0aXRpb25cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Carlos Marques/source/repos/Projeto_ESFase2/Projeto_ESFase2/Views/Competition/Showgroup.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGV0aXRpb25cU2hvd2dyb3VwLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Carlos Marques/source/repos/Projeto_ESFase2/Projeto_ESFase2/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Carlos Marques/source/repos/Projeto_ESFase2/Projeto_ESFase2/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Carlos Marques/source/repos/Projeto_ESFase2/Projeto_ESFase2/Views/Nominee/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm9taW5lZVxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Carlos Marques/source/repos/Projeto_ESFase2/Projeto_ESFase2/Views/Nominee/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm9taW5lZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Carlos Marques/source/repos/Projeto_ESFase2/Projeto_ESFase2/Views/Shared/Error.cshtml]
