@@ -42,16 +42,12 @@
                 <span name="StartingTime" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label name="Nominee" class="control-label">List of Nominee</label>
-                <select name="Nominee" class="form-control" />
-                    <option value="">Select Nominees</option>
-                    @foreach (var group in ViewBag.nominee)
-                    {
-
-                    <option value="@group">@group.Name <b>@group.Type</b></option>
-                   
-                    }
-                <span name="Nominee" class="text-danger"></span>
+                <input name="CompetitionUsers" type="hidden" class="form-control" />
+                <span name="CompetitionUsers" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input name="CompetitionNominees" type="hidden" class="form-control" />
+                <span name="CompetitionNominees" class="text-danger"></span>
             </div>
             
 

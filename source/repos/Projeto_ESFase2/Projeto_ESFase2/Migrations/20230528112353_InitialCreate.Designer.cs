@@ -12,7 +12,7 @@ using Projeto_ESFase2.Data;
 namespace Projeto_ESFase2.Migrations
 {
     [DbContext(typeof(ES2Context))]
-    [Migration("20230527124819_InitialCreate")]
+    [Migration("20230528112353_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -24,36 +24,6 @@ namespace Projeto_ESFase2.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
-
-            modelBuilder.Entity("CompetitionNominee", b =>
-                {
-                    b.Property<int>("CompetitionId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("NomineeId")
-                        .HasColumnType("int");
-
-                    b.HasKey("CompetitionId", "NomineeId");
-
-                    b.HasIndex("NomineeId");
-
-                    b.ToTable("CompetitionNominee");
-                });
-
-            modelBuilder.Entity("CompetitionUser", b =>
-                {
-                    b.Property<int>("CompetitionId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
-
-                    b.HasKey("CompetitionId", "UserId");
-
-                    b.HasIndex("UserId");
-
-                    b.ToTable("CompetitionUser");
-                });
 
             modelBuilder.Entity("Projeto_ESFase2.Models.Competition", b =>
                 {
@@ -82,7 +52,37 @@ namespace Projeto_ESFase2.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Competition", (string)null);
+                    b.ToTable("Competitions");
+                });
+
+            modelBuilder.Entity("Projeto_ESFase2.Models.CompetitionNominee", b =>
+                {
+                    b.Property<int>("CompetitionId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("NomineeId")
+                        .HasColumnType("int");
+
+                    b.HasKey("CompetitionId", "NomineeId");
+
+                    b.HasIndex("NomineeId");
+
+                    b.ToTable("CompetitionNominee");
+                });
+
+            modelBuilder.Entity("Projeto_ESFase2.Models.CompetitionUser", b =>
+                {
+                    b.Property<int>("CompetitionId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("CompetitionId", "UserId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("CompetitionUser");
                 });
 
             modelBuilder.Entity("Projeto_ESFase2.Models.Nominee", b =>
@@ -107,7 +107,7 @@ namespace Projeto_ESFase2.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Nominee", (string)null);
+                    b.ToTable("Nominees");
                 });
 
             modelBuilder.Entity("Projeto_ESFase2.Models.User", b =>
@@ -135,37 +135,62 @@ namespace Projeto_ESFase2.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("User", (string)null);
+                    b.ToTable("Users");
                 });
 
-            modelBuilder.Entity("CompetitionNominee", b =>
+            modelBuilder.Entity("Projeto_ESFase2.Models.CompetitionNominee", b =>
                 {
-                    b.HasOne("Projeto_ESFase2.Models.Competition", null)
-                        .WithMany()
+                    b.HasOne("Projeto_ESFase2.Models.Competition", "Competition")
+                        .WithMany("CompetitionNominees")
                         .HasForeignKey("CompetitionId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Projeto_ESFase2.Models.Nominee", null)
-                        .WithMany()
+                    b.HasOne("Projeto_ESFase2.Models.Nominee", "Nominee")
+                        .WithMany("CompetitionNominees")
                         .HasForeignKey("NomineeId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Competition");
+
+                    b.Navigation("Nominee");
                 });
 
-            modelBuilder.Entity("CompetitionUser", b =>
+            modelBuilder.Entity("Projeto_ESFase2.Models.CompetitionUser", b =>
                 {
-                    b.HasOne("Projeto_ESFase2.Models.Competition", null)
-                        .WithMany()
+                    b.HasOne("Projeto_ESFase2.Models.Competition", "Competition")
+                        .WithMany("CompetitionUsers")
                         .HasForeignKey("CompetitionId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Projeto_ESFase2.Models.User", null)
-                        .WithMany()
+                    b.HasOne("Projeto_ESFase2.Models.User", "User")
+                        .WithMany("CompetitionUsers")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Competition");
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("Projeto_ESFase2.Models.Competition", b =>
+                {
+                    b.Navigation("CompetitionNominees");
+
+                    b.Navigation("CompetitionUsers");
+                });
+
+            modelBuilder.Entity("Projeto_ESFase2.Models.Nominee", b =>
+                {
+                    b.Navigation("CompetitionNominees");
+                });
+
+            modelBuilder.Entity("Projeto_ESFase2.Models.User", b =>
+                {
+                    b.Navigation("CompetitionUsers");
                 });
 #pragma warning restore 612, 618
         }

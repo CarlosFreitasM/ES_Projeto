@@ -12,7 +12,7 @@ namespace Projeto_ESFase2.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Competition",
+                name: "Competitions",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -25,11 +25,11 @@ namespace Projeto_ESFase2.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Competition", x => x.Id);
+                    table.PrimaryKey("PK_Competitions", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
-                name: "Nominee",
+                name: "Nominees",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -40,11 +40,11 @@ namespace Projeto_ESFase2.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Nominee", x => x.Id);
+                    table.PrimaryKey("PK_Nominees", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
-                name: "User",
+                name: "Users",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -56,7 +56,7 @@ namespace Projeto_ESFase2.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_User", x => x.Id);
+                    table.PrimaryKey("PK_Users", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -70,15 +70,15 @@ namespace Projeto_ESFase2.Migrations
                 {
                     table.PrimaryKey("PK_CompetitionNominee", x => new { x.CompetitionId, x.NomineeId });
                     table.ForeignKey(
-                        name: "FK_CompetitionNominee_Competition_CompetitionId",
+                        name: "FK_CompetitionNominee_Competitions_CompetitionId",
                         column: x => x.CompetitionId,
-                        principalTable: "Competition",
+                        principalTable: "Competitions",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_CompetitionNominee_Nominee_NomineeId",
+                        name: "FK_CompetitionNominee_Nominees_NomineeId",
                         column: x => x.NomineeId,
-                        principalTable: "Nominee",
+                        principalTable: "Nominees",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -94,15 +94,15 @@ namespace Projeto_ESFase2.Migrations
                 {
                     table.PrimaryKey("PK_CompetitionUser", x => new { x.CompetitionId, x.UserId });
                     table.ForeignKey(
-                        name: "FK_CompetitionUser_Competition_CompetitionId",
+                        name: "FK_CompetitionUser_Competitions_CompetitionId",
                         column: x => x.CompetitionId,
-                        principalTable: "Competition",
+                        principalTable: "Competitions",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_CompetitionUser_User_UserId",
+                        name: "FK_CompetitionUser_Users_UserId",
                         column: x => x.UserId,
-                        principalTable: "User",
+                        principalTable: "Users",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -128,13 +128,13 @@ namespace Projeto_ESFase2.Migrations
                 name: "CompetitionUser");
 
             migrationBuilder.DropTable(
-                name: "Nominee");
+                name: "Nominees");
 
             migrationBuilder.DropTable(
-                name: "Competition");
+                name: "Competitions");
 
             migrationBuilder.DropTable(
-                name: "User");
+                name: "Users");
         }
     }
 }

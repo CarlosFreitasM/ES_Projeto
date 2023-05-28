@@ -6,6 +6,7 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Projeto_ESFase2.Data;
 using Projeto_ESFase2.Models;
 using Projeto_ESFase2.Services;
+using System.Linq;
 
 namespace Projeto_ESFase2.Controllers
 {
@@ -22,7 +23,6 @@ namespace Projeto_ESFase2.Controllers
         public ActionResult Index()
         {
 
-            
             return View(_context.Competitions.ToList());
           
         }
@@ -33,20 +33,66 @@ namespace Projeto_ESFase2.Controllers
             return View();
         }
 
-        // GET: CompetitionController/Create
-        public ActionResult Create()
+        // GET: CompetitionController/AddNominee
+        public async Task<ActionResult> AddNominee(int Id)
         {
+            var competition = _context.Competitions.Include(c => c.CompetitionNominees).ThenInclude(cn => cn.Nominee).FirstOrDefault(c => c.Id == Id);
+            
+            var availableNominee = await _context.Nominees.ToListAsync();
 
-            List<Nominee> nominees = new List<Nominee>();
-            var listNominee = _context.Nominee.ToList();
-            foreach (var nominee in listNominee)
+            var viewModel = new AddNomineeViewModel
             {
-                nominees.Add(nominee);
+                CompetitionId = competition.Id,
+                CompetitionName = competition.Name,
+                
+                AvailableNominee = availableNominee
+            };
+
+            return View(viewModel);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> AddNominee([FromForm] AddNomineeViewModel viewModel)
+        {
+            var competitionee = _context.Competitions.Include(c => c.CompetitionNominees)
+                                                .FirstOrDefault(c => c.Id == viewModel.CompetitionId);
+
+            if (competitionee == null)
+            {
+                return NotFound();
             }
 
-            ViewBag.nominee = nominees;
+            if (ModelState.IsValid)
+            {
+                var selectedNominee = _context.Nominees.Find(viewModel.SelectedNomineeIds);
 
+                if (selectedNominee != null)
+                {
+                    var competitionNominee = new CompetitionNominee
+                    {
+                        CompetitionId = competitionee.Id,
+                        NomineeId = selectedNominee.Id
+                    };
+
+                    competitionee.CompetitionNominees.Add(competitionNominee);
+                    _context.SaveChanges();
+                }
+
+                return RedirectToAction("Index", "Competition"); // Redirect to the desired action and controller
+            }
+
+            viewModel.AvailableNominee = _context.Nominees.ToList();
             return View();
+        }
+    
+
+    // GET: CompetitionController/AddNominee
+    public ActionResult Create()
+        {
+            
+
+            return View(_context.Competitions.ToList());
         }
 
         // POST: CompetitionController/Create
@@ -56,7 +102,6 @@ namespace Projeto_ESFase2.Controllers
         {
 
             var iterateCompetition = await _context.Competitions.ToListAsync();
-            var iterateNominee = competition.Nominee;
 
             if (ModelState.IsValid)
             {
@@ -67,10 +112,24 @@ namespace Projeto_ESFase2.Controllers
                         ViewData["Error"] = "Ja existe uma competição com este nome ou categoria";
                         return View();
                     }
+
+                     var competitions = new List<Competition>
+                        { 
+                            new Competition { Name = item.Name
+                            , Category = item.Category
+                            , NumberVotes = item.NumberVotes
+                            , ClosingTime = item.ClosingTime
+                            , StartingTime = item.StartingTime
+                            , CompetitionUsers = item.CompetitionUsers
+                            , CompetitionNominees = new List<CompetitionNominee>()},
+                        };
+
+                    
                 }
                 _context.Add(competition);
-                await _context.SaveChangesAsync();
                 
+                await _context.SaveChangesAsync();
+               
                 return RedirectToAction("Index", "Competition");
             }
             ViewData["Error"] = "Algo correu errado";
@@ -126,7 +185,7 @@ namespace Projeto_ESFase2.Controllers
 
         public List<GroupedNominee> Showgroup()
         {
-            List<Nominee> items = _context.Nominee.ToList();
+            List<Nominee> items = _context.Nominees.ToList();
 
             var groupedItems = items.GroupBy(x => x.Type)
                                     .Select(g => new GroupedNominee

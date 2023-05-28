@@ -32,6 +32,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Carlos Marques/source/repos/Projeto_ESFase2/Projeto_ESFase2/Views/Competition/AddNominee.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGV0aXRpb25cQWRkTm9taW5lZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Carlos Marques/source/repos/Projeto_ESFase2/Projeto_ESFase2/Views/Competition/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGV0aXRpb25cQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -40,8 +44,24 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGV0aXRpb25cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Carlos Marques/source/repos/Projeto_ESFase2/Projeto_ESFase2/Views/Competition/Showgroup.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGV0aXRpb25cU2hvd2dyb3VwLmNzaHRtbA==
+[C:/Users/Carlos Marques/source/repos/Projeto_ESFase2/Projeto_ESFase2/Views/Comp/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcFxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Carlos Marques/source/repos/Projeto_ESFase2/Projeto_ESFase2/Views/Comp/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcFxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Carlos Marques/source/repos/Projeto_ESFase2/Projeto_ESFase2/Views/Comp/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcFxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Carlos Marques/source/repos/Projeto_ESFase2/Projeto_ESFase2/Views/Comp/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcFxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Carlos Marques/source/repos/Projeto_ESFase2/Projeto_ESFase2/Views/Comp/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Carlos Marques/source/repos/Projeto_ESFase2/Projeto_ESFase2/Views/Home/Index.cshtml]
@@ -58,6 +78,26 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Carlos Marques/source/repos/Projeto_ESFase2/Projeto_ESFase2/Views/Nominee/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm9taW5lZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Carlos Marques/source/repos/Projeto_ESFase2/Projeto_ESFase2/Views/Nomi/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm9taVxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Carlos Marques/source/repos/Projeto_ESFase2/Projeto_ESFase2/Views/Nomi/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm9taVxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Carlos Marques/source/repos/Projeto_ESFase2/Projeto_ESFase2/Views/Nomi/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm9taVxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Carlos Marques/source/repos/Projeto_ESFase2/Projeto_ESFase2/Views/Nomi/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm9taVxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Carlos Marques/source/repos/Projeto_ESFase2/Projeto_ESFase2/Views/Nomi/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm9taVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Carlos Marques/source/repos/Projeto_ESFase2/Projeto_ESFase2/Views/Shared/Error.cshtml]

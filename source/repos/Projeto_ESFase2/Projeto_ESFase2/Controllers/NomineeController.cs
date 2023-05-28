@@ -19,7 +19,7 @@ namespace Projeto_ESFase2.Controllers
         // GET: NomineeController
         public ActionResult Index()
         {
-            return View(_context.Nominee.ToList());
+            return View(_context.Nominees.ToList());
         }
 
         // GET: NomineeController/Details/5
@@ -39,7 +39,7 @@ namespace Projeto_ESFase2.Controllers
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Create([FromForm] Nominee nominee)
         {
-            var iterateNominee = await _context.Nominee.ToListAsync();
+            var iterateNominee = await _context.Nominees.ToListAsync();
 
             if (ModelState.IsValid)
             {

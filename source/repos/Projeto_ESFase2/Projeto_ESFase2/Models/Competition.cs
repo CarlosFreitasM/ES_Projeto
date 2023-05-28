@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Projeto_ESFase2.Models
@@ -17,9 +18,9 @@ namespace Projeto_ESFase2.Models
 
         public DateTime StartingTime { get; set; }
 
-        public List<User> User { get; } = new();
+        public virtual List<CompetitionUser> CompetitionUsers { get; set; }
 
-        public List<Nominee> Nominee { get; } = new();
+        public virtual List<CompetitionNominee> CompetitionNominees { get; set; }
 
 
     }

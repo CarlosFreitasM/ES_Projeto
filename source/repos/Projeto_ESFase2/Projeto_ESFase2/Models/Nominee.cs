@@ -13,6 +13,6 @@ namespace Projeto_ESFase2.Models
 
         public string Type { get; set; }
 
-        public List<Competition> Competition { get; } = new();
+        public List<CompetitionNominee> CompetitionNominees { get; set; }
     }
 }

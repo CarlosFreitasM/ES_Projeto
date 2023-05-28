@@ -8,6 +8,7 @@ namespace Projeto_ESFase2.Models
 {
     public class GroupedNominee
     {
+
         public string NomineeType { get; set; }
 
         public List<Nominee> Items { get; set; }
