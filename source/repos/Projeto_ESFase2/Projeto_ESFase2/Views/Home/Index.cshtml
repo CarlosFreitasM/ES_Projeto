@@ -1,9 +1,72 @@
-﻿
-@{
-    ViewData["Title"] = "Home Page";
-}
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            text-align: center;
+        }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+        .welcome {
+            margin-top: 100px;
+        }
+
+        h1 {
+            font-size: 72px;
+            color: white;
+        }
+
+        p {
+            font-size: 18px;
+            color: #74787a;
+            margin-top: 20px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #74787a;
+            color: #ffffff;
+            font-size: 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 30px;
+        }
+
+        .button:hover {
+            background-color: #494b4d;
+            color: #ffffff
+        }
+
+        .logo-container {
+            display: flex;
+            justify-content: space-between;
+            max-width: 2000 px;  
+            margin: 0 auto;  
+        }
+
+        .logo {
+            width: 3000px;
+            height: auto;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="welcome">
+        <h1>Welcome to The Movie Awards 2023</h1>
+        <p>To begin your votation, make sure you are signed in.</p>
+        <a href="/Auth/Login" class="button">Sign In</a>
+    </div>
+    <div class="logo-container">
+        <div class="logo"> 
+            <img src="Images/logo.png" alt="Logo">
+        </div>
+        <!-- <div class="logo"> 
+            <img src="Images/superhomem.png" alt="Superhomem">
+        </div> -->
+    </div>
+</body>
+</html>

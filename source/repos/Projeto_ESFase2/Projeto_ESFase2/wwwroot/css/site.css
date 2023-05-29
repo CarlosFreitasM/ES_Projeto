@@ -1,6 +1,6 @@
 html {
   font-size: 14px;
-  background: rgb(45, 44, 44);
+  background: white;
   position: relative;
   min-height: 100%;
 }
@@ -17,31 +17,31 @@ html {
 
 body {
   margin-bottom: 60px;
-  background: rgb(45, 44, 44);
+  background: white;
 }
 
-.loginbox{
-  position: absolute;
-  width: 400px;
-  height: 400px;
-  background-color: white;
-  border-radius: 20px;
-  left: 50%;
-  margin-left: -200px;
-  top:50%;
-  margin-top: -225px;
+.loginbox {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background-color: #121212;
+    border-radius: 20px;
+    left: 50%;
+    margin-left: -200px;
+    top: 50%;
+    margin-top: -225px;
 }
 
-.registerbox{
-  position: absolute;
-  width: 400px;
-  height: 480px;
-  background-color: white;
-  border-radius: 20px;
-  left: 50%;
-  margin-left: -200px;
-  top:50%;
-  margin-top: -250px;
+.registerbox {
+    position: absolute;
+    width: 400px;
+    height: 480px;
+    background-color: #121212;
+    border-radius: 20px;
+    left: 50%;
+    margin-left: -200px;
+    top: 50%;
+    margin-top: -250px;
 }
 
 .content{
