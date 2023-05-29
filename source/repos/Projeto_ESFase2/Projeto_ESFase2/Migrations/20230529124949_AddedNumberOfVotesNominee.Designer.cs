@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Projeto_ESFase2.Data;
 
@@ -11,9 +12,11 @@ using Projeto_ESFase2.Data;
 namespace Projeto_ESFase2.Migrations
 {
     [DbContext(typeof(ES2Context))]
-    partial class ES2ContextModelSnapshot : ModelSnapshot
+    [Migration("20230529124949_AddedNumberOfVotesNominee")]
+    partial class AddedNumberOfVotesNominee
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

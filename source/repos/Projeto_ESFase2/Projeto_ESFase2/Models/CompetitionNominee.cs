@@ -9,5 +9,6 @@ namespace Projeto_ESFase2.Models
         public Competition Competition { get; set; }
         public int NomineeId { get; set; }
         public Nominee Nominee { get; set; }
+        public long numberOfVotes { get; set; }
     }
 }

@@ -10,19 +10,41 @@ using System.Linq;
 
 namespace Projeto_ESFase2.Controllers
 {
-    public class CompetitionController : Controller
+    public class CompetitionController : Controller, ICompetitionObservable
     {
         private readonly ES2Context _context;
 
-        public CompetitionController(ES2Context context)
+        private List<ICompetitionObserver> _observers;
+
+        public CompetitionController(ES2Context context )
         {
             _context = context;
 
+            _observers = new List<ICompetitionObserver>();
+
+        }
+
+        public void RegisterObserver(ICompetitionObserver observer)
+        { 
+            _observers.Add(observer);
+        }
+
+        public void UnregisterObserver(ICompetitionObserver observer)
+        {
+            _observers.Remove(observer);
+        }
+
+        public void NotifyObservers(string message)
+        {
+            foreach (var observer in _observers)
+            {
+                observer.Update(message);
+            }
         }
         // GET: CompetitionController
         public ActionResult Index()
         {
-
+            
             return View(_context.Competitions.ToList());
           
         }
@@ -32,6 +54,7 @@ namespace Projeto_ESFase2.Controllers
         {
             return View();
         }
+
 
         // GET: CompetitionController/AddNominee
         public async Task<ActionResult> AddNominee(int Id)
@@ -43,6 +66,7 @@ namespace Projeto_ESFase2.Controllers
             var viewModel = new AddNomineeViewModel
             {
                 CompetitionId = competition.Id,
+
                 CompetitionName = competition.Name,
                 
                 AvailableNominee = availableNominee
@@ -72,7 +96,8 @@ namespace Projeto_ESFase2.Controllers
                     var competitionNominee = new CompetitionNominee
                     {
                         CompetitionId = competitionee.Id,
-                        NomineeId = selectedNominee.Id
+                        NomineeId = selectedNominee.Id,
+                        numberOfVotes = 0
                     };
 
                     competitionee.CompetitionNominees.Add(competitionNominee);
@@ -112,28 +137,45 @@ namespace Projeto_ESFase2.Controllers
                         ViewData["Error"] = "Ja existe uma competição com este nome ou categoria";
                         return View();
                     }
-
-                     var competitions = new List<Competition>
-                        { 
-                            new Competition { Name = item.Name
-                            , Category = item.Category
-                            , NumberVotes = item.NumberVotes
-                            , ClosingTime = item.ClosingTime
-                            , StartingTime = item.StartingTime
-                            , CompetitionUsers = item.CompetitionUsers
-                            , CompetitionNominees = new List<CompetitionNominee>()},
-                        };
-
-                    
+             
                 }
                 _context.Add(competition);
                 
                 await _context.SaveChangesAsync();
-               
+
+                NotifyObservers("Competition has started!");
+
                 return RedirectToAction("Index", "Competition");
             }
             ViewData["Error"] = "Algo correu errado";
             return View(_context.Competitions.ToList());
+        }
+
+        public async Task<ActionResult> ViewCompetition(int Id)
+        {
+            var nomIds = new List<Nominee>();
+            var competition = await _context.Competitions.Include(cn => cn.CompetitionNominees).FirstOrDefaultAsync(c => c.Id == Id);
+
+            var compNom = competition.CompetitionNominees.Where(cn => cn.CompetitionId == Id);
+
+            var availableNominee = await _context.Nominees.ToListAsync();
+
+            foreach (var item in compNom)
+            {
+                var NomComp = _context.Nominees.FirstOrDefault(n => n.Id == item.NomineeId);
+               nomIds.Add(NomComp);
+            }
+
+            var viewModel = new CompetitionViewModel
+            {
+                
+                CompetitionId = competition.Id,
+                CompetitionName = competition.Name,
+                AvailableCompNom = nomIds,
+                AvailableNominees = availableNominee
+
+            };
+            return View(viewModel); 
         }
 
         // GET: CompetitionController/Edit/5

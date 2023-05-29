@@ -11,12 +11,18 @@ namespace Projeto_ESFase2.Services
         public static string userName;
         public static string Email;
         public static DateTime ClosingTime;
+        public static DateTime StartingTime;
         public static List<User> Users;
         public static List<Nominee> Nominees;
 
         public static void getClossingTime(DateTime clossingTime)
         {
             ClosingTime = clossingTime;     
+        }
+
+        public static void getStartingTime(DateTime startingTime)
+        {
+            StartingTime = startingTime;
         }
 
         public static void getListOfUsers(List<User> user)
