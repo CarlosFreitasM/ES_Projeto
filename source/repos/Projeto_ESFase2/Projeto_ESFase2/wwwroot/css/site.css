@@ -1,5 +1,8 @@
 html {
   font-size: 14px;
+  background: rgb(45, 44, 44);
+  position: relative;
+  min-height: 100%;
 }
 
 @media (min-width: 768px) {
@@ -12,11 +15,36 @@ html {
   box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
 
-html {
-  position: relative;
-  min-height: 100%;
-}
-
 body {
   margin-bottom: 60px;
+  background: rgb(45, 44, 44);
+}
+
+.loginbox{
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background-color: white;
+  border-radius: 20px;
+  left: 50%;
+  margin-left: -200px;
+  top:50%;
+  margin-top: -225px;
+}
+
+.registerbox{
+  position: absolute;
+  width: 400px;
+  height: 480px;
+  background-color: white;
+  border-radius: 20px;
+  left: 50%;
+  margin-left: -200px;
+  top:50%;
+  margin-top: -250px;
+}
+
+.content{
+  margin-top: 20px;
+  margin-left: 20px;
 }
