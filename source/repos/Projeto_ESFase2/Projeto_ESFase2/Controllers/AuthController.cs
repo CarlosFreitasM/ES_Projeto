@@ -21,8 +21,18 @@ namespace Projeto_ESFase2.Controllers
         public AuthController(ES2Context context)
         {
             _context = context;
+
             
         }
+
+        public void Update(IObservable observable)
+        {
+            if (observable == null)
+            {
+                Console.WriteLine("There are no competitions to be observed");
+            }
+        }
+
         public IActionResult Login()
         {
             return View();
@@ -41,7 +51,8 @@ namespace Projeto_ESFase2.Controllers
                 {
                     _context.Update(item);
                     await _context.SaveChangesAsync();
-                    UsersServices.getUserInfo(item.Name, item.Email, item.IsAdmin);
+
+                    UsersServices.getUserInfo(item.Id, item.Name, item.Email, item.IsAdmin);
                     return RedirectToAction("Index", "Competition");
                 }
             }
@@ -79,6 +90,7 @@ namespace Projeto_ESFase2.Controllers
                         return View();
                     }
                 }
+                
                 user.Password = Encrypt(user.Password);
                 _context.Add(user);
                 await _context.SaveChangesAsync();
