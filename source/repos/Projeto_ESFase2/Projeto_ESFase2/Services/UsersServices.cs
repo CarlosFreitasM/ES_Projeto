@@ -7,20 +7,20 @@
         public static string Email;
         public static bool isAdmin;
 
-        public static void getUserName(string username)
+        public static void setUserName(string username)
         {
             userName = username;
         }
-        public static void getUserEmail(string email)
+        public static void setUserEmail(string email)
         {
             Email = email;
         }
-        public static void getUserAdmin(bool admin)
+        public static void setUserAdmin(bool admin)
         {
             isAdmin = admin;
         }
 
-        public static void getUserInfo(int id,  string username, string email, bool admin)
+        public static void setUserInfo(int id,  string username, string email, bool admin)
         {
             userId = id;
             userName = username;

@@ -13,13 +13,13 @@ namespace Projeto_ESFase2.Controllers
     public class CompetitionController : Controller, ICompetitionObservable
     {
         private readonly ES2Context _context;
-
+        private CompetitionFuntions _competitionFuntions;
         private List<ICompetitionObserver> _observers;
 
-        public CompetitionController(ES2Context context )
+        public CompetitionController(ES2Context context, CompetitionFuntions _competitionFuntions)
         {
             _context = context;
-
+            _competitionFuntions = _competitionFuntions;
             _observers = new List<ICompetitionObserver>();
 
         }
@@ -176,6 +176,51 @@ namespace Projeto_ESFase2.Controllers
 
             };
             return View(viewModel); 
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+
+        public async Task<ActionResult> VoteNominee([FromForm] CompetitionViewModel viewModel)
+        {
+            var competition = _context.Competitions.Include(c => c.CompetitionNominees)
+                                                .FirstOrDefault(c => c.Id == viewModel.CompetitionId);
+            var userVoted = _context.Competitions.Include(c => c.CompetitionUsers)
+                                                .FirstOrDefault(c => c.Id == viewModel.CompetitionId);
+
+            if (competition == null)
+            {
+                return NotFound();
+            }
+
+            if (userVoted == null)
+            {
+                return NotFound();
+            }
+
+            if (ModelState.IsValid)
+            {
+                _competitionFuntions.incrementCompetitionNomineeNumberVotes(viewModel, competition);
+                _context.SaveChanges();
+
+                if (userVoted != null)
+                {
+                    var competitionUser = new CompetitionUser
+                    {
+                        CompetitionId = userVoted.Id,
+                        UserId = UsersServices.userId,
+                    };
+
+                    userVoted.CompetitionUsers.Add(competitionUser);
+                    _context.SaveChanges();
+                }
+                competition.NumberVotes++;
+                _context.SaveChanges();
+
+                return RedirectToAction("Index", "Competition"); // Redirect to the desired action and controller
+            }
+
+            return View(viewModel);
         }
 
         // GET: CompetitionController/Edit/5
