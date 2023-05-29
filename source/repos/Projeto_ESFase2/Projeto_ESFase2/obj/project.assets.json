@@ -10780,24 +10780,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Carlos Marques\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\rober\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Carlos Marques\\source\\repos\\Projeto_ESFase2\\Projeto_ESFase2\\Projeto_ESFase2.csproj",
+      "projectUniqueName": "C:\\Users\\rober\\Desktop\\Projeto2_ES\\source\\repos\\Projeto_ESFase2\\Projeto_ESFase2\\Projeto_ESFase2.csproj",
       "projectName": "Projeto_ESFase2",
-      "projectPath": "C:\\Users\\Carlos Marques\\source\\repos\\Projeto_ESFase2\\Projeto_ESFase2\\Projeto_ESFase2.csproj",
-      "packagesPath": "C:\\Users\\Carlos Marques\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Carlos Marques\\source\\repos\\Projeto_ESFase2\\Projeto_ESFase2\\obj\\",
+      "projectPath": "C:\\Users\\rober\\Desktop\\Projeto2_ES\\source\\repos\\Projeto_ESFase2\\Projeto_ESFase2\\Projeto_ESFase2.csproj",
+      "packagesPath": "C:\\Users\\rober\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\rober\\Desktop\\Projeto2_ES\\source\\repos\\Projeto_ESFase2\\Projeto_ESFase2\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Carlos Marques\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\rober\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -10879,7 +10874,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
       }
     }
   }
