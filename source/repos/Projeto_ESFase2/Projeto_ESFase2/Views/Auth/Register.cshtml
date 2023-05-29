@@ -1,54 +1,57 @@
 ﻿@model Projeto_ESFase2.Models.User
+<div class="registerbox">
+    <br/>
+    <h1 style="text-align: center;">Registo</h1>
+    <div class="row">
+        <div class="content">
+            <div class="col-md-4">
+                <form asp-action="Register">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
-<h4>User</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Register">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    @if (ViewData["Error"] != null)
+                    {
+                        <div class="error-box">
+                            <p><strong>Erro:</strong> @ViewData["Error"].ToString()</p>
+                        </div>
+                    }
+                    <div class="form-group" style="width: 270%;">
+                        <label asp-for="Name" class="control-label"></label>
+                        <input asp-for="Name" class="form-control"/>
+                        <span asp-validation-for="Name" class="text-danger"></span>
+                    </div>
+                    <div class="form-group" style="width: 270%;">
+                        <label asp-for="Email" class="control-label"></label>
+                        <input asp-for="Email" class="form-control"/>
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+                    <div class="form-group" style="width: 270%;">
+                        <label asp-for="Password" class="control-label"></label>
+                        <input asp-for="Password" type="password" class="form-control"/>
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
+                    <div class="form-group form-check">
+                        <label class="form-check-label">
+                            <input class="form-check-input" asp-for="IsAdmin"/> @Html.DisplayNameFor(model => model.IsAdmin)
+                        </label>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="CompetitionUsers" class="control-label"></label>
+                        <input asp-for="CompetitionUsers" type="hidden" class="form-control"/>
+                        <span asp-validation-for="CompetitionUsers" class=" text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Create" class="btn btn-primary"/>
+                    </div>
+                </form>
+            </div>
 
-            @if (ViewData["Error"] != null)
-            {
-                <div class="error-box">
-                    <p><strong>Erro:</strong> @ViewData["Error"].ToString()</p>
-                </div>
-            }
-            <div class="form-group">
-                <label asp-for="Name" class="control-label"></label>
-                <input asp-for="Name" class="form-control" />
-                <span asp-validation-for="Name" class="text-danger"></span>
+
+            <div>
+                <a asp-action="Index">Back to List</a>
             </div>
-            <div class="form-group">
-                <label asp-for="Email" class="control-label"></label>
-                <input asp-for="Email" class="form-control" />
-                <span asp-validation-for="Email" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Password" class="control-label"></label>
-                <input asp-for="Password" type="password" class="form-control" />
-                <span asp-validation-for="Password" class="text-danger"></span>
-            </div>
-            <div class="form-group form-check">
-                <label class="form-check-label">
-                    <input class="form-check-input" asp-for="IsAdmin" /> @Html.DisplayNameFor(model => model.IsAdmin)
-                </label>
-            </div>
-            <div class="form-group">
-                <label asp-for="CompetitionUsers" class="control-label"></label>
-                <input asp-for="CompetitionUsers" type="hidden" class="form-control" />
-                <span asp-validation-for="CompetitionUsers" class=" text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
+        </div>
     </div>
 </div>
-
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
-
 @section Scripts {
     @{
         await Html.RenderPartialAsync("_ValidationScriptsPartial");
