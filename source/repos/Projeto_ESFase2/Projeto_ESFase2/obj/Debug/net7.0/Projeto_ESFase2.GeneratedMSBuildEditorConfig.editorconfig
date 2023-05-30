@@ -9,125 +9,133 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Projeto_ESFase2
 build_property.RootNamespace = Projeto_ESFase2
-build_property.ProjectDir = C:\Users\rober\Desktop\Projeto2_ES\source\repos\Projeto_ESFase2\Projeto_ESFase2\
+build_property.ProjectDir = C:\Users\Carlos Marques\source\repos\TesteESRepository\source\repos\Projeto_ESFase2\Projeto_ESFase2\
 build_property.RazorLangVersion = 7.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\rober\Desktop\Projeto2_ES\source\repos\Projeto_ESFase2\Projeto_ESFase2
+build_property.MSBuildProjectDirectory = C:\Users\Carlos Marques\source\repos\TesteESRepository\source\repos\Projeto_ESFase2\Projeto_ESFase2
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/rober/Desktop/Projeto2_ES/source/repos/Projeto_ESFase2/Projeto_ESFase2/Pages/_ValidationScriptsPartial.cshtml]
+[C:/Users/Carlos Marques/source/repos/TesteESRepository/source/repos/Projeto_ESFase2/Projeto_ESFase2/Pages/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rober/Desktop/Projeto2_ES/source/repos/Projeto_ESFase2/Projeto_ESFase2/Views/Auth/About.cshtml]
+[C:/Users/Carlos Marques/source/repos/TesteESRepository/source/repos/Projeto_ESFase2/Projeto_ESFase2/Views/Auth/About.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxBYm91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rober/Desktop/Projeto2_ES/source/repos/Projeto_ESFase2/Projeto_ESFase2/Views/Auth/Login.cshtml]
+[C:/Users/Carlos Marques/source/repos/TesteESRepository/source/repos/Projeto_ESFase2/Projeto_ESFase2/Views/Auth/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rober/Desktop/Projeto2_ES/source/repos/Projeto_ESFase2/Projeto_ESFase2/Views/Auth/Register.cshtml]
+[C:/Users/Carlos Marques/source/repos/TesteESRepository/source/repos/Projeto_ESFase2/Projeto_ESFase2/Views/Auth/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rober/Desktop/Projeto2_ES/source/repos/Projeto_ESFase2/Projeto_ESFase2/Views/Competition/AddNominee.cshtml]
+[C:/Users/Carlos Marques/source/repos/TesteESRepository/source/repos/Projeto_ESFase2/Projeto_ESFase2/Views/Competition/AddNominee.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGV0aXRpb25cQWRkTm9taW5lZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rober/Desktop/Projeto2_ES/source/repos/Projeto_ESFase2/Projeto_ESFase2/Views/Competition/Create.cshtml]
+[C:/Users/Carlos Marques/source/repos/TesteESRepository/source/repos/Projeto_ESFase2/Projeto_ESFase2/Views/Competition/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGV0aXRpb25cQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rober/Desktop/Projeto2_ES/source/repos/Projeto_ESFase2/Projeto_ESFase2/Views/Competition/Index.cshtml]
+[C:/Users/Carlos Marques/source/repos/TesteESRepository/source/repos/Projeto_ESFase2/Projeto_ESFase2/Views/Competition/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGV0aXRpb25cRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Carlos Marques/source/repos/TesteESRepository/source/repos/Projeto_ESFase2/Projeto_ESFase2/Views/Competition/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGV0aXRpb25cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rober/Desktop/Projeto2_ES/source/repos/Projeto_ESFase2/Projeto_ESFase2/Views/Competition/ViewCompetition.cshtml]
+[C:/Users/Carlos Marques/source/repos/TesteESRepository/source/repos/Projeto_ESFase2/Projeto_ESFase2/Views/Competition/ViewCompetition.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGV0aXRpb25cVmlld0NvbXBldGl0aW9uLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rober/Desktop/Projeto2_ES/source/repos/Projeto_ESFase2/Projeto_ESFase2/Views/Comp/Create.cshtml]
+[C:/Users/Carlos Marques/source/repos/TesteESRepository/source/repos/Projeto_ESFase2/Projeto_ESFase2/Views/Competition/VoteNominee.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGV0aXRpb25cVm90ZU5vbWluZWUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Carlos Marques/source/repos/TesteESRepository/source/repos/Projeto_ESFase2/Projeto_ESFase2/Views/Comp/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcFxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rober/Desktop/Projeto2_ES/source/repos/Projeto_ESFase2/Projeto_ESFase2/Views/Comp/Delete.cshtml]
+[C:/Users/Carlos Marques/source/repos/TesteESRepository/source/repos/Projeto_ESFase2/Projeto_ESFase2/Views/Comp/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcFxEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rober/Desktop/Projeto2_ES/source/repos/Projeto_ESFase2/Projeto_ESFase2/Views/Comp/Details.cshtml]
+[C:/Users/Carlos Marques/source/repos/TesteESRepository/source/repos/Projeto_ESFase2/Projeto_ESFase2/Views/Comp/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcFxEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rober/Desktop/Projeto2_ES/source/repos/Projeto_ESFase2/Projeto_ESFase2/Views/Comp/Edit.cshtml]
+[C:/Users/Carlos Marques/source/repos/TesteESRepository/source/repos/Projeto_ESFase2/Projeto_ESFase2/Views/Comp/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcFxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rober/Desktop/Projeto2_ES/source/repos/Projeto_ESFase2/Projeto_ESFase2/Views/Comp/Index.cshtml]
+[C:/Users/Carlos Marques/source/repos/TesteESRepository/source/repos/Projeto_ESFase2/Projeto_ESFase2/Views/Comp/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rober/Desktop/Projeto2_ES/source/repos/Projeto_ESFase2/Projeto_ESFase2/Views/Home/Index.cshtml]
+[C:/Users/Carlos Marques/source/repos/TesteESRepository/source/repos/Projeto_ESFase2/Projeto_ESFase2/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rober/Desktop/Projeto2_ES/source/repos/Projeto_ESFase2/Projeto_ESFase2/Views/Home/Privacy.cshtml]
+[C:/Users/Carlos Marques/source/repos/TesteESRepository/source/repos/Projeto_ESFase2/Projeto_ESFase2/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rober/Desktop/Projeto2_ES/source/repos/Projeto_ESFase2/Projeto_ESFase2/Views/Nominee/Create.cshtml]
+[C:/Users/Carlos Marques/source/repos/TesteESRepository/source/repos/Projeto_ESFase2/Projeto_ESFase2/Views/Nominee/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm9taW5lZVxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rober/Desktop/Projeto2_ES/source/repos/Projeto_ESFase2/Projeto_ESFase2/Views/Nominee/Index.cshtml]
+[C:/Users/Carlos Marques/source/repos/TesteESRepository/source/repos/Projeto_ESFase2/Projeto_ESFase2/Views/Nominee/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm9taW5lZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rober/Desktop/Projeto2_ES/source/repos/Projeto_ESFase2/Projeto_ESFase2/Views/Nomi/Create.cshtml]
+[C:/Users/Carlos Marques/source/repos/TesteESRepository/source/repos/Projeto_ESFase2/Projeto_ESFase2/Views/Nomi/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm9taVxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rober/Desktop/Projeto2_ES/source/repos/Projeto_ESFase2/Projeto_ESFase2/Views/Nomi/Delete.cshtml]
+[C:/Users/Carlos Marques/source/repos/TesteESRepository/source/repos/Projeto_ESFase2/Projeto_ESFase2/Views/Nomi/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm9taVxEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rober/Desktop/Projeto2_ES/source/repos/Projeto_ESFase2/Projeto_ESFase2/Views/Nomi/Details.cshtml]
+[C:/Users/Carlos Marques/source/repos/TesteESRepository/source/repos/Projeto_ESFase2/Projeto_ESFase2/Views/Nomi/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm9taVxEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rober/Desktop/Projeto2_ES/source/repos/Projeto_ESFase2/Projeto_ESFase2/Views/Nomi/Edit.cshtml]
+[C:/Users/Carlos Marques/source/repos/TesteESRepository/source/repos/Projeto_ESFase2/Projeto_ESFase2/Views/Nomi/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm9taVxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rober/Desktop/Projeto2_ES/source/repos/Projeto_ESFase2/Projeto_ESFase2/Views/Nomi/Index.cshtml]
+[C:/Users/Carlos Marques/source/repos/TesteESRepository/source/repos/Projeto_ESFase2/Projeto_ESFase2/Views/Nomi/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm9taVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rober/Desktop/Projeto2_ES/source/repos/Projeto_ESFase2/Projeto_ESFase2/Views/Shared/Error.cshtml]
+[C:/Users/Carlos Marques/source/repos/TesteESRepository/source/repos/Projeto_ESFase2/Projeto_ESFase2/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rober/Desktop/Projeto2_ES/source/repos/Projeto_ESFase2/Projeto_ESFase2/Views/Shared/_UserAuthenticated.cshtml]
+[C:/Users/Carlos Marques/source/repos/TesteESRepository/source/repos/Projeto_ESFase2/Projeto_ESFase2/Views/Shared/_UserAuthenticated.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Vc2VyQXV0aGVudGljYXRlZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rober/Desktop/Projeto2_ES/source/repos/Projeto_ESFase2/Projeto_ESFase2/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/Carlos Marques/source/repos/TesteESRepository/source/repos/Projeto_ESFase2/Projeto_ESFase2/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rober/Desktop/Projeto2_ES/source/repos/Projeto_ESFase2/Projeto_ESFase2/Views/Users/Create.cshtml]
+[C:/Users/Carlos Marques/source/repos/TesteESRepository/source/repos/Projeto_ESFase2/Projeto_ESFase2/Views/Users/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rober/Desktop/Projeto2_ES/source/repos/Projeto_ESFase2/Projeto_ESFase2/Views/_ViewImports.cshtml]
+[C:/Users/Carlos Marques/source/repos/TesteESRepository/source/repos/Projeto_ESFase2/Projeto_ESFase2/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rober/Desktop/Projeto2_ES/source/repos/Projeto_ESFase2/Projeto_ESFase2/Views/_ViewStart.cshtml]
+[C:/Users/Carlos Marques/source/repos/TesteESRepository/source/repos/Projeto_ESFase2/Projeto_ESFase2/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/rober/Desktop/Projeto2_ES/source/repos/Projeto_ESFase2/Projeto_ESFase2/Views/Shared/_Layout.cshtml]
+[C:/Users/Carlos Marques/source/repos/TesteESRepository/source/repos/Projeto_ESFase2/Projeto_ESFase2/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-sg9j2jiqdq
