@@ -43,7 +43,7 @@ namespace Projeto_ESFase2.Controllers
         // GET: Nomi/Create
         public IActionResult Create()
         {
-            ViewData["Errord"] = ModelState.IsValid;
+         
             return View();
         }
 
@@ -55,7 +55,7 @@ namespace Projeto_ESFase2.Controllers
         public async Task<IActionResult> Create([FromForm] Nominee nominee)
         {
             
-            ViewData["Errord"] = ModelState.IsValid;
+          
             if (ModelState.IsValid)
             {
                 _context.Add(nominee);

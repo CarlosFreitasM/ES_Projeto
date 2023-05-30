@@ -1,4 +1,37 @@
 ﻿@model Projeto_ESFase2.Models.User
+
+<style>
+    a{
+        color: white;
+    }
+    h1 {
+        color: white;
+    }
+    label {
+        color:white;
+    }
+     .button {
+            display: inline-block;
+        padding: 10px 20px;
+        background-color: #74787a;
+        color: #ffffff;
+        font-size: 20px;
+        text-decoration: none;
+        border-radius: 5px;
+        margin-top: 30px;
+        }
+
+    .button:hover {
+        background-color: #494b4d;
+        color: #ffffff
+    }
+
+        
+</style>
+
+
+
+
 <div class="loginbox">
     <br/>
     <h1 style="text-align: center;">Login </h1>
@@ -15,18 +48,19 @@
                     <br/>
                     <div class="form-group" style="width: 325%;">
                         <label asp-for="Password" class="control-label"></label>
-                        <input asp-for="Password" class="form-control"/>
+                        <input asp-for="Password" type="password" class="form-control"/>
                         <span asp-validation-for="Password" class="text-danger"></span>
                     </div>
-                    <br/>
                     <div class="form-group">
-                        <input type="submit" value="Login" class="btn btn-primary"/>
+                        <input type="submit" value="Login" class="button"/>
                     </div>
                 </form>
+                <br />
             </div>
         </div>
         <div>
             <a asp-action="Index">Back to List</a>
+            <a asp-action="Register"> Create Account </a>
         </div>
     </div>
 </div>

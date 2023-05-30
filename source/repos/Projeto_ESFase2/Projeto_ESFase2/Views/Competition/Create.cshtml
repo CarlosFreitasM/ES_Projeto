@@ -6,10 +6,13 @@
     ViewData["Title"] = "Create";
     Layout = "_UserAuthenticated";
 }
+<style>
+    a{
+        color:black;
+    }
+</style>
 
-<h1>Create</h1>
-
-<h4>Competition</h4>
+<h1><b>Create Competition </b></h1>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -49,11 +52,12 @@
                 <input name="CompetitionNominees" type="hidden" class="form-control" />
                 <span name="CompetitionNominees" class="text-danger"></span>
             </div>
-            
+            <br />
 
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
+                <input type="submit" value="Create" class="btn btn-dark"/> 
             </div>
+            <br>
         </form>
     </div>
 </div>

@@ -5,43 +5,48 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Projeto_ESFase2</title>
+    <title>@ViewData["Title"] The Movie Awards 2023</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Projeto_ESFase2.styles.css" asp-append-version="true" />
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Competition" asp-action="Index">Competitions</a>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-dark box-shadow mb-3">
+                <a class="navbar-brand text-light" asp-area="" asp-action="">The Movie Awards 2023</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Auth" asp-action="Logout" type="button">Logout</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark">Hello @UsersServices.userName !</a>
-                            <a class="nav-link text-dark">@ViewData["Notification"]</a>
-                        </li>
-                    </ul>
-                </div>
+            <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                <ul class="navbar-nav flex-grow-1">
+                    <li class="nav-item">
+                        <a class="nav-link text-light" asp-area="" asp-controller="Competition" asp-action="Index" type="button">Vote Now</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" asp-area="" asp-controller="Auth" asp-action="Logout" type="button">Logout</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light">Hello @UsersServices.userName !</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light">@ViewData["Notification"]</a>
+                    </li>
+                </ul>
             </div>
         </nav>
     </header>
     <div class="container">
-        <main role="main" class="pb-3">
+        
             @RenderBody()
-        </main>
+        
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2023 - Projeto_ESFase2 - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+  <footer class="border-top align-middle border-dark footer text-muted">
+        <div class="container-fluid h-75" style="vertical-align:baseline">
+                <p class="col-xs-9" style="margin-top:revert;">
+                    &copy; 2023 - Projeto_ESFase2 - <a asp-area="" asp-controller="Home" asp-action="Privacy" style="color:black;">Privacy</a>
+                </p>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
