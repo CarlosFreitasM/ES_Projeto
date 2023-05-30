@@ -92,21 +92,28 @@
                 <td>
                         
                                 <a asp-action="AddNominee"  asp-route-id="@item.Id">Add Nominee</a> |
-                                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
                                 <form method="post" asp-controller="Competition" asp-action="Delete" asp-route-id="@item.Id">
                             <button type="submit" method="post">Delete</button>
                     </form>
 
                     </td>
                 </tr>
+                
             }
             <td>
-                @if (CompetitionsServices.StartingTime <= DateTime.Now)
+                @if (item.ClosingTime < DateTime.Now || UsersServices.isAdmin)
+                {
+                    
+                            <a asp-action="Details" asp-route-id="@item.Id">Results</a>
+                    
+
+                }
+            </td>
+            <td>
+                @if (item.StartingTime <= DateTime.Now && item.ClosingTime > DateTime.Now)
                 {
                     <a asp-action="ViewCompetition" asp-route-id="@item.Id">View Competition</a>
-        
                 }
-
             </td>
             
                        

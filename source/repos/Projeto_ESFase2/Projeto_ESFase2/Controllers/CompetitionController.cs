@@ -127,9 +127,9 @@ namespace Projeto_ESFase2.Controllers
             {
                 foreach (var item in iterateCompetition)
                 {
-                    if (competition.Name == item.Name || competition.Category == item.Category )
+                    if (competition.Name == item.Name)
                     {
-                        ViewData["Error"] = "Ja existe uma competição com este nome ou categoria";
+                        ViewData["Error"] = "A competition with this name already exists";
                         return View();
                     }
              

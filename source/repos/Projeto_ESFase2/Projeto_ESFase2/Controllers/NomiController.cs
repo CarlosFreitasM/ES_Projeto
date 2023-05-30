@@ -54,16 +54,24 @@ namespace Projeto_ESFase2.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([FromForm] Nominee nominee)
         {
-            
+            var addingNominee = await _context.Nominees.ToListAsync();
           
             if (ModelState.IsValid)
             {
+                foreach (var item in addingNominee)
+                {
+                    if (item.Name == nominee.Name)
+                    {
+                        ViewData["ErrorNomi"] = "This nominee name is already on the data base";
+                        return View();
+                    }
+                }
                 _context.Add(nominee);
                 await _context.SaveChangesAsync();
                 return RedirectToAction("Index", "Nomi");
             }
             
-            ViewData["Error"] = "Algo correu errado";
+            ViewData["Error"] = "Something went wrong!";
             return View();
         }
 
