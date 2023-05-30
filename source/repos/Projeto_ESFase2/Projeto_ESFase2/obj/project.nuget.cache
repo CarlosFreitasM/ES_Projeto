@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+zMSCiJX77EWuoTU1mMBHZ0D8mK5wrgOQtwIOxptK5QjPXRI5OwMvGkzvHG5Q0WYnpthTQpAYkKLimhmibAUVQ==",
+  "dgSpecHash": "XCC5XIcKY/cFXYjqxPY314hvN28vsPU0LkEq5u6yS2r7AA0zYGROYfGlQNqv1ya38Luj3rbLFVohGMVL10Jjdg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\rober\\Desktop\\Projeto2_ES\\source\\repos\\Projeto_ESFase2\\Projeto_ESFase2\\Projeto_ESFase2.csproj",
+  "projectFilePath": "C:\\Users\\rober\\OneDrive\\Ambiente de Trabalho\\Projeto_ES\\source\\repos\\Projeto_ESFase2\\Projeto_ESFase2\\Projeto_ESFase2.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\rober\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\rober\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

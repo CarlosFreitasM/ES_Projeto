@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\rober\\Desktop\\Projeto2_ES\\source\\repos\\Projeto_ESFase2\\Projeto_ESFase2\\Projeto_ESFase2.csproj": {}
+    "C:\\Users\\rober\\OneDrive\\Ambiente de Trabalho\\Projeto_ES\\source\\repos\\Projeto_ESFase2\\Projeto_ESFase2\\Projeto_ESFase2.csproj": {}
   },
   "projects": {
-    "C:\\Users\\rober\\Desktop\\Projeto2_ES\\source\\repos\\Projeto_ESFase2\\Projeto_ESFase2\\Projeto_ESFase2.csproj": {
+    "C:\\Users\\rober\\OneDrive\\Ambiente de Trabalho\\Projeto_ES\\source\\repos\\Projeto_ESFase2\\Projeto_ESFase2\\Projeto_ESFase2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\rober\\Desktop\\Projeto2_ES\\source\\repos\\Projeto_ESFase2\\Projeto_ESFase2\\Projeto_ESFase2.csproj",
+        "projectUniqueName": "C:\\Users\\rober\\OneDrive\\Ambiente de Trabalho\\Projeto_ES\\source\\repos\\Projeto_ESFase2\\Projeto_ESFase2\\Projeto_ESFase2.csproj",
         "projectName": "Projeto_ESFase2",
-        "projectPath": "C:\\Users\\rober\\Desktop\\Projeto2_ES\\source\\repos\\Projeto_ESFase2\\Projeto_ESFase2\\Projeto_ESFase2.csproj",
+        "projectPath": "C:\\Users\\rober\\OneDrive\\Ambiente de Trabalho\\Projeto_ES\\source\\repos\\Projeto_ESFase2\\Projeto_ESFase2\\Projeto_ESFase2.csproj",
         "packagesPath": "C:\\Users\\rober\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\rober\\Desktop\\Projeto2_ES\\source\\repos\\Projeto_ESFase2\\Projeto_ESFase2\\obj\\",
+        "outputPath": "C:\\Users\\rober\\OneDrive\\Ambiente de Trabalho\\Projeto_ES\\source\\repos\\Projeto_ESFase2\\Projeto_ESFase2\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\rober\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -22,6 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\sdk\\7.0.302\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -96,7 +97,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }
