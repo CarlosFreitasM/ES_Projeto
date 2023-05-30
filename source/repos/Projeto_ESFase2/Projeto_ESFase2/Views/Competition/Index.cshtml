@@ -48,7 +48,7 @@
     <tbody>
 
 @foreach (var item in Model) {
-            @if (DateTime.Now < item.ClosingTime && !@UsersServices.isAdmin)
+            @if (DateTime.Now < item.ClosingTime)
             {
                 <tr>
                     <td>
@@ -66,44 +66,22 @@
                     <td>
                         @Html.DisplayFor(modelItem => item.StartingTime)
                     </td>
-
+                    @if (@UsersServices.isAdmin)
+                    {
+                        <td>             
+                            <a asp-action="AddNominee"  asp-route-id="@item.Id">Add Nominee</a> |
+                            <a asp-action="Details" asp-route-id="@item.Id">Details</a> 
+                            <form method="post" asp-controller="Competition" asp-action="Delete" asp-route-id="@item.Id">
+                                <button type="submit" class="btn btn-danger" method="post">Delete</button>
+                            </form>
+                        </td>
+                    }
                 </tr>
             }        
-            @if (@UsersServices.isAdmin)
-            {
-                <tr>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Name)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Category)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.NumberVotes)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.ClosingTime)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.StartingTime)
-                        </td>
-
-                    
-                <td>
-                        
-                                <a asp-action="AddNominee"  asp-route-id="@item.Id">Add Nominee</a> |
-                                <a asp-action="Details" asp-route-id="@item.Id">Details</a> 
-                                <form method="post" asp-controller="Competition" asp-action="Delete" asp-route-id="@item.Id">
-                            <button type="submit" class="btn btn-danger" method="post">Delete</button>
-                    </form>
-
-                    </td>
-                </tr>
-            }
             <td>
                 @if (CompetitionsServices.StartingTime <= DateTime.Now)
                 {
-                <a class="btn btn-success" asp-action="ViewCompetition" asp-route-id="@item.Id">View Competition</a>
+                    <a class="btn btn-success" asp-action="ViewCompetition" asp-route-id="@item.Id">View Competition</a>
         
                 }
 
