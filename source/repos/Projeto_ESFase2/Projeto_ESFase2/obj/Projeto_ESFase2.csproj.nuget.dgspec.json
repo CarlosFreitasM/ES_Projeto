@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\rober\\Desktop\\Projeto2_ES\\source\\repos\\Projeto_ESFase2\\Projeto_ESFase2\\Projeto_ESFase2.csproj": {}
+    "C:\\Users\\tiago\\OneDrive\\Documentos\\GitHub\\ES_Projeto\\source\\repos\\Projeto_ESFase2\\Projeto_ESFase2\\Projeto_ESFase2.csproj": {}
   },
   "projects": {
-    "C:\\Users\\rober\\Desktop\\Projeto2_ES\\source\\repos\\Projeto_ESFase2\\Projeto_ESFase2\\Projeto_ESFase2.csproj": {
+    "C:\\Users\\tiago\\OneDrive\\Documentos\\GitHub\\ES_Projeto\\source\\repos\\Projeto_ESFase2\\Projeto_ESFase2\\Projeto_ESFase2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\rober\\Desktop\\Projeto2_ES\\source\\repos\\Projeto_ESFase2\\Projeto_ESFase2\\Projeto_ESFase2.csproj",
+        "projectUniqueName": "C:\\Users\\tiago\\OneDrive\\Documentos\\GitHub\\ES_Projeto\\source\\repos\\Projeto_ESFase2\\Projeto_ESFase2\\Projeto_ESFase2.csproj",
         "projectName": "Projeto_ESFase2",
-        "projectPath": "C:\\Users\\rober\\Desktop\\Projeto2_ES\\source\\repos\\Projeto_ESFase2\\Projeto_ESFase2\\Projeto_ESFase2.csproj",
-        "packagesPath": "C:\\Users\\rober\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\rober\\Desktop\\Projeto2_ES\\source\\repos\\Projeto_ESFase2\\Projeto_ESFase2\\obj\\",
+        "projectPath": "C:\\Users\\tiago\\OneDrive\\Documentos\\GitHub\\ES_Projeto\\source\\repos\\Projeto_ESFase2\\Projeto_ESFase2\\Projeto_ESFase2.csproj",
+        "packagesPath": "C:\\Users\\tiago\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\tiago\\OneDrive\\Documentos\\GitHub\\ES_Projeto\\source\\repos\\Projeto_ESFase2\\Projeto_ESFase2\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\rober\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\tiago\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -96,7 +96,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }
