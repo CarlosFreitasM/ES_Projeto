@@ -19,8 +19,8 @@
 @if (@UsersServices.isAdmin==true)
 {
     <p>
-        <a asp-action="Create">Create New Category</a>
-        <a asp-controller="Nomi" asp-action="Create"> Create Nominee </a>
+        <a class="btn btn-primary" asp-action="Create">Create New Category</a>
+        <a class="btn btn-info" asp-controller="Nomi" asp-action="Create"> Create Nominee </a>
     </p>
 }
 
@@ -28,19 +28,19 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Name)
+                Name
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Category)
+                Category
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.NumberVotes)
+                Number of votes
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ClosingTime)
+                Finish Time
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.StartingTime)
+                Start Time
             </th>
             <th></th>
         </tr>
@@ -92,9 +92,9 @@
                 <td>
                         
                                 <a asp-action="AddNominee"  asp-route-id="@item.Id">Add Nominee</a> |
-                                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                                <a asp-action="Details" asp-route-id="@item.Id">Details</a> 
                                 <form method="post" asp-controller="Competition" asp-action="Delete" asp-route-id="@item.Id">
-                            <button type="submit" method="post">Delete</button>
+                            <button type="submit" class="btn btn-danger" method="post">Delete</button>
                     </form>
 
                     </td>
@@ -103,7 +103,7 @@
             <td>
                 @if (CompetitionsServices.StartingTime <= DateTime.Now)
                 {
-                    <a asp-action="ViewCompetition" asp-route-id="@item.Id">View Competition</a>
+                <a class="btn btn-success" asp-action="ViewCompetition" asp-route-id="@item.Id">View Competition</a>
         
                 }
 
