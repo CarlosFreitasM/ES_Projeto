@@ -1,0 +1,60 @@
+﻿@model Projeto_ESFase2.Models.CompetitionResultViewModel
+@{
+    ViewData["Title"] = "Details";
+    var URLId = ViewContext.RouteData.Values["id"];
+}
+
+<h1>Details</h1>
+
+<h2>View Competition: @Model.CompetitionName Model </h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Nominee Name
+            </th>
+            <th>
+                Number Of Votes
+            </th>
+            <th>
+                Nominee percentage of Votes
+            </th>
+               
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.AvailableCompNom)
+        {
+            <tr>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                @foreach (var numberVotes in item.CompetitionNominees)
+                {
+                    <td>
+
+                        @numberVotes.numberOfVotes
+
+                    </td>
+
+                    <td>
+                        @{
+                            float percentage = (@numberVotes.numberOfVotes / (float)@Model.TotalVotes)*100;
+
+                        }
+                        @percentage%
+
+                    </td>
+                }
+                </tr>
+        }
+    </tbody>
+</table>
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
