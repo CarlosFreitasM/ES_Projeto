@@ -5,11 +5,15 @@
       "PackagePath": "staticwebassets\\ES_Fase2.bundle.scp.css"
     },
     {
+<<<<<<< HEAD
+      "Id": "C:\\Users\\Carlos Marques\\source\\repos\\ES_Fase2\\ES_Fase2\\wwwroot\\css\\site.css",
+=======
       "Id": "C:\\Users\\rober\\OneDrive\\Ambiente de Trabalho\\Projeto_ES\\source\\repos\\ES_Fase2\\ES_Fase2\\wwwroot\\css\\App.css",
       "PackagePath": "staticwebassets\\css\\App.css"
     },
     {
       "Id": "C:\\Users\\rober\\OneDrive\\Ambiente de Trabalho\\Projeto_ES\\source\\repos\\ES_Fase2\\ES_Fase2\\wwwroot\\css\\site.css",
+>>>>>>> origin/Bito_to_merge
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
@@ -17,6 +21,9 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+<<<<<<< HEAD
+      "Id": "C:\\Users\\Carlos Marques\\source\\repos\\ES_Fase2\\ES_Fase2\\wwwroot\\js\\site.js",
+=======
       "Id": "C:\\Users\\rober\\OneDrive\\Ambiente de Trabalho\\Projeto_ES\\source\\repos\\ES_Fase2\\ES_Fase2\\wwwroot\\js\\App.js",
       "PackagePath": "staticwebassets\\js\\App.js"
     },
@@ -62,6 +69,7 @@
     },
     {
       "Id": "C:\\Users\\rober\\OneDrive\\Ambiente de Trabalho\\Projeto_ES\\source\\repos\\ES_Fase2\\ES_Fase2\\wwwroot\\js\\site.js",
+>>>>>>> origin/Bito_to_merge
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {

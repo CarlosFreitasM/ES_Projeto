@@ -13,6 +13,7 @@ builder.Services.AddDbContext<ES2Context>(options =>
 // Add services to the container.
 builder.Services.AddScoped<ICompetitionObservable, CompetitionController>();
 builder.Services.AddScoped<IUser, UserServices>();
+builder.Services.AddScoped<CompetitionFuntions>();
 
 
 

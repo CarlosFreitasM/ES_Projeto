@@ -1,6 +1,10 @@
 {
   "Version": 1,
+<<<<<<< HEAD
+  "Hash": "vUED0GW+/WvLUf7hXy9lu41UFMkB9PD2NLzWe4ygzYI=",
+=======
   "Hash": "C/81WfAAcisS2ji+U/QzIit4Nqa9NRC1bvYrMgoqv3U=",
+>>>>>>> origin/Bito_to_merge
   "Source": "ES_Fase2",
   "BasePath": "_content/ES_Fase2",
   "Mode": "Default",
@@ -1071,6 +1075,9 @@
       "OriginalItemSpec": "C:\\Users\\rober\\OneDrive\\Ambiente de Trabalho\\Projeto_ES\\source\\repos\\ES_Fase2\\ES_Fase2\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\ES_Fase2.bundle.scp.css"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\Carlos Marques\\source\\repos\\ES_Fase2\\ES_Fase2\\wwwroot\\css\\site.css",
+=======
       "Identity": "C:\\Users\\rober\\OneDrive\\Ambiente de Trabalho\\Projeto_ES\\source\\repos\\ES_Fase2\\ES_Fase2\\wwwroot\\css\\App.css",
       "SourceId": "ES_Fase2",
       "SourceType": "Discovered",
@@ -1089,6 +1096,7 @@
     },
     {
       "Identity": "C:\\Users\\rober\\OneDrive\\Ambiente de Trabalho\\Projeto_ES\\source\\repos\\ES_Fase2\\ES_Fase2\\wwwroot\\css\\site.css",
+>>>>>>> origin/Bito_to_merge
       "SourceId": "ES_Fase2",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\rober\\OneDrive\\Ambiente de Trabalho\\Projeto_ES\\source\\repos\\ES_Fase2\\ES_Fase2\\wwwroot\\",
@@ -1122,6 +1130,9 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\Carlos Marques\\source\\repos\\ES_Fase2\\ES_Fase2\\wwwroot\\js\\site.js",
+=======
       "Identity": "C:\\Users\\rober\\OneDrive\\Ambiente de Trabalho\\Projeto_ES\\source\\repos\\ES_Fase2\\ES_Fase2\\wwwroot\\js\\App.js",
       "SourceId": "ES_Fase2",
       "SourceType": "Discovered",
@@ -1293,6 +1304,7 @@
     },
     {
       "Identity": "C:\\Users\\rober\\OneDrive\\Ambiente de Trabalho\\Projeto_ES\\source\\repos\\ES_Fase2\\ES_Fase2\\wwwroot\\js\\site.js",
+>>>>>>> origin/Bito_to_merge
       "SourceId": "ES_Fase2",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\rober\\OneDrive\\Ambiente de Trabalho\\Projeto_ES\\source\\repos\\ES_Fase2\\ES_Fase2\\wwwroot\\",
@@ -1309,6 +1321,9 @@
       "OriginalItemSpec": "wwwroot\\js\\site.js"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\Carlos Marques\\source\\repos\\ES_Fase2\\ES_Fase2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+=======
       "Identity": "C:\\Users\\rober\\OneDrive\\Ambiente de Trabalho\\Projeto_ES\\source\\repos\\ES_Fase2\\ES_Fase2\\wwwroot\\js\\Votar.js",
       "SourceId": "ES_Fase2",
       "SourceType": "Discovered",
@@ -1327,6 +1342,7 @@
     },
     {
       "Identity": "C:\\Users\\rober\\OneDrive\\Ambiente de Trabalho\\Projeto_ES\\source\\repos\\ES_Fase2\\ES_Fase2\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+>>>>>>> origin/Bito_to_merge
       "SourceId": "ES_Fase2",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\rober\\OneDrive\\Ambiente de Trabalho\\Projeto_ES\\source\\repos\\ES_Fase2\\ES_Fase2\\wwwroot\\",

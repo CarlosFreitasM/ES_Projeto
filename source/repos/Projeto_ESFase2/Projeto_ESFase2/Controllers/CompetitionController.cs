@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Http.Connections;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using NuGet.Packaging.Signing;
 using Projeto_ESFase2.Data;
 using Projeto_ESFase2.Models;
 using Projeto_ESFase2.Services;
@@ -13,13 +14,13 @@ namespace Projeto_ESFase2.Controllers
     public class CompetitionController : Controller, ICompetitionObservable
     {
         private readonly ES2Context _context;
-
+        private CompetitionFuntions _competitionFuntions;
         private List<ICompetitionObserver> _observers;
 
-        public CompetitionController(ES2Context context )
+        public CompetitionController(ES2Context context, CompetitionFuntions competitionFuntions)
         {
             _context = context;
-
+            _competitionFuntions = competitionFuntions;
             _observers = new List<ICompetitionObserver>();
 
         }
@@ -44,15 +45,9 @@ namespace Projeto_ESFase2.Controllers
         // GET: CompetitionController
         public ActionResult Index()
         {
-            
-            return View(_context.Competitions.ToList());
-          
-        }
 
-        // GET: CompetitionController/Details/5
-        public ActionResult Details(int id)
-        {
-            return View();
+            return View(_context.Competitions.ToList());
+
         }
 
 
@@ -160,9 +155,10 @@ namespace Projeto_ESFase2.Controllers
 
             var availableNominee = await _context.Nominees.ToListAsync();
 
+            //Iterator
             foreach (var item in compNom)
             {
-                var NomComp = _context.Nominees.FirstOrDefault(n => n.Id == item.NomineeId);
+               var NomComp = _context.Nominees.FirstOrDefault(n => n.Id == item.NomineeId);
                nomIds.Add(NomComp);
             }
 
@@ -172,10 +168,54 @@ namespace Projeto_ESFase2.Controllers
                 CompetitionId = competition.Id,
                 CompetitionName = competition.Name,
                 AvailableCompNom = nomIds,
-                AvailableNominees = availableNominee
 
             };
             return View(viewModel); 
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+
+        public async Task<ActionResult> VoteNominee([FromForm] CompetitionViewModel viewModel)
+        {
+            var competition = _context.Competitions.Include(c => c.CompetitionNominees)
+                                                .FirstOrDefault(c => c.Id == viewModel.CompetitionId);
+            var userVoted = _context.Competitions.Include(c => c.CompetitionUsers)
+                                                .FirstOrDefault(c => c.Id == viewModel.CompetitionId);
+
+            if (competition == null)
+            {
+                return NotFound();
+            }
+
+            if (userVoted == null)
+            {
+                return NotFound();
+            }
+
+            if (ModelState.IsValid && userVoted.CompetitionUsers.Find(u => u.UserId == UsersServices.userId) == null)
+            {
+                _competitionFuntions.incrementCompetitionNomineeNumberVotes(viewModel, competition);
+                _context.SaveChanges();
+
+                if (userVoted != null)
+                {
+                    var competitionUser = new CompetitionUser
+                    {
+                        CompetitionId = userVoted.Id,
+                        UserId = UsersServices.userId,
+                    };
+
+                    userVoted.CompetitionUsers.Add(competitionUser);
+                    _context.SaveChanges();
+                }
+                competition.NumberVotes++;
+                _context.SaveChanges();
+
+                return RedirectToAction("Index", "Competition"); // Redirect to the desired action and controller
+            }
+            ViewData["Error"] = "You already voted on this competition!";
+            return View();
         }
 
         // GET: CompetitionController/Edit/5
@@ -237,6 +277,49 @@ namespace Projeto_ESFase2.Controllers
                                     })
                                     .ToList();
             return groupedItems;
+        }
+
+        public async Task<ActionResult> Details(int Id)
+        {
+            var nomIds = new List<Nominee>();
+            var compNomVotes = new List<CompetitionNominee>();
+            var competition = await _context.Competitions.Include(c => c.CompetitionNominees)
+                                                         .ThenInclude(cn => cn.Nominee).FirstOrDefaultAsync(c => c.Id == Id);
+            var compNom = competition.CompetitionNominees.Where(cn => cn.CompetitionId == Id);
+
+            if (Id == null || _context.Competitions == null)
+            {
+                return NotFound();
+            }
+
+            if (competition == null)
+            {
+                return NotFound();
+            }
+
+            foreach (var item in compNom)
+            {
+                var NomComp = _context.Nominees.FirstOrDefault(n => n.Id == item.NomineeId);
+                nomIds.Add(NomComp);
+            }
+
+            foreach (var item in nomIds)
+            {
+                var NomComp = competition.CompetitionNominees.FirstOrDefault(n => n.NomineeId == item.Id);
+                compNomVotes.Add(NomComp);
+            }
+
+            var viewModel = new CompetitionResultViewModel
+            {
+
+                CompetitionName = competition.Name,
+                TotalVotes = competition.NumberVotes,
+                AvailableCompNom = nomIds,
+                NumberOfVotesPer = compNomVotes
+
+            };
+
+            return View(viewModel);
         }
     }
 }

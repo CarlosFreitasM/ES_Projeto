@@ -51,8 +51,7 @@ namespace Projeto_ESFase2.Controllers
                 {
                     _context.Update(item);
                     await _context.SaveChangesAsync();
-
-                    UsersServices.getUserInfo(item.Id, item.Name, item.Email, item.IsAdmin);
+                    UsersServices.setUserInfo(item.Id, item.Name, item.Email, item.IsAdmin);
                     return RedirectToAction("Index", "Competition");
                 }
             }
