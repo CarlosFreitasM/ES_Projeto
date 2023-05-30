@@ -7,12 +7,19 @@
     
 }
 
-<h1>Index</h1>
+
+<style>
+    a{
+        color:black;
+    }
+</style>
+
+<h1><b>Categories</b></h1>
 
 @if (@UsersServices.isAdmin==true)
 {
     <p>
-        <a asp-action="Create">Create New</a>
+        <a asp-action="Create">Create New Category</a>
         <a asp-controller="Nomi" asp-action="Create"> Create Nominee </a>
     </p>
 }
