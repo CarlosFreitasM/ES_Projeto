@@ -1,0 +1,110 @@
+﻿@using Projeto_ESFase2.Services;
+@model IEnumerable<Projeto_ESFase2.Models.Competition>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "_UserAuthenticated";
+    
+}
+
+<h1>Index</h1>
+
+@if (@UsersServices.isAdmin==true)
+{
+    <p>
+        <a asp-action="Create">Create New</a>
+    </p>
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Category)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NumberVotes)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ClosingTime)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StartingTime)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+
+@foreach (var item in Model) {
+            @if (DateTime.Now < item.ClosingTime && !@UsersServices.isAdmin)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Category)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NumberVotes)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ClosingTime)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.StartingTime)
+                    </td>
+
+                </tr>
+            }        
+            @if (@UsersServices.isAdmin)
+            {
+                <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Category)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.NumberVotes)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ClosingTime)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.StartingTime)
+                        </td>
+
+                    
+                <td>
+                        
+                                <a asp-action="AddNominee"  asp-route-id="@item.Id">Add Nominee</a> |
+                                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                                <form method="post" asp-controller="Competition" asp-action="Delete" asp-route-id="@item.Id">
+                            <button type="submit" method="post">Delete</button>
+                    </form>
+
+                    </td>
+                </tr>
+            }
+            <td>
+                @if (CompetitionsServices.StartingTime <= DateTime.Now)
+                {
+                    <a asp-action="ViewCompetition" asp-route-id="@item.Id">View Competition</a>
+        
+                }
+
+            </td>
+            
+                       
+            
+            
+
+}   
+    </tbody>
+</table>

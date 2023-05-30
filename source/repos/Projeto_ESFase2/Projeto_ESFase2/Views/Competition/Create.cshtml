@@ -1,0 +1,67 @@
+﻿@using Projeto_ESFase2.Services;
+@model IEnumerable<Projeto_ESFase2.Models.Competition> 
+
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "_UserAuthenticated";
+}
+
+<h1>Create</h1>
+
+<h4>Competition</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-controller="Competition" asp-action="Create" method="post">
+            @ViewData["Error"]
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label name="Name" class="control-label">Name</label>
+                <input name="Name" class="form-control" />
+                <span name="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label name="Category" class="control-label">Category</label>
+                <input name="Category" class="form-control" />
+                <span name="Category" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label name="NumberVotes" class="control-label">Number of Votes</label>
+                <input name="NumberVotes" class="form-control" value="0" readonly />
+                <span name="NumberVotes" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label name="ClosingTime" class="control-label">Clossing Time</label>
+                <input name="ClosingTime" type="datetime-local" class="form-control" />
+                <span name="ClosingTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label name="StartingTime" class="control-label">Starting Time</label>
+                <input name="StartingTime" type="datetime-local" class="form-control" />
+                <span name="StartingTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input name="CompetitionUsers" type="hidden" class="form-control" />
+                <span name="CompetitionUsers" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input name="CompetitionNominees" type="hidden" class="form-control" />
+                <span name="CompetitionNominees" class="text-danger"></span>
+            </div>
+            
+
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
