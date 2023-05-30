@@ -12,18 +12,22 @@ namespace Projeto_ESFase2.Data
         public void incrementCompetitionNomineeNumberVotes(CompetitionViewModel viewModel, Competition competition)
         {
             long votes = 0;
-            var votedCompetitionNominee = competition.CompetitionNominees
-                                                .Where(c => c.CompetitionId == viewModel.CompetitionId)
-                                                .Where(n => n.NomineeId == viewModel.NomineeId);
+            var votedCompetitionNominee = competition.CompetitionNominees.Where(c => c.CompetitionId == viewModel.CompetitionId);
+
 
             if (votedCompetitionNominee != null)
             {
                 foreach (var item in votedCompetitionNominee)
                 {
-                    votes = item.numberOfVotes++;
+                    if (item.NomineeId == viewModel.SelectedNominee)
+                    {
+                        votes = item.numberOfVotes++;
+                    }
+                    
                 }
 
             }
+            
         }
 
 

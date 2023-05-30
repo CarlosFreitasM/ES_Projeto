@@ -18,20 +18,18 @@
             <input type="hidden" asp-for="CompetitionName" />
             <span asp-validation-for="CompetitionName" class="text-danger"></span>
             <br>
-            <input type="hidden" asp-for="SelectedNomineeIds" />
-            <span asp-validation-for="SelectedNomineeIds" class="text-danger"></span>
-            <br>
             <div class="form-group">
             @foreach (var item in Model.AvailableCompNom)
             {
                     <div>
-                        <input type="radio" asp-for="AvailableCompNom" name="selectNominee" value="@item.Id" /> @item.Name
-                        <span asp-validation-for="AvailableCompNom" class="text-danger"></span>
+                        <input type="radio" asp-for="SelectedNominee" name="SelectedNominee" value="@item.Id" /> @item.Name
+                        <span asp-validation-for="SelectedNominee" class="text-danger"></span>
                     </div>
             }
             </div>
-            <input asp-for="AvailableNominees" readonly/>
-            <span asp-validation-for="AvailableNominees" class="text-danger"></span>
+            <input type="hidden" asp-for="AvailableCompNom" />
+            <span asp-validation-for="AvailableCompNom" class="text-danger"></span>
+
 
             <div class="form-group">
                 <input type="submit" value="Vote Nominee" class="btn btn-primary" />

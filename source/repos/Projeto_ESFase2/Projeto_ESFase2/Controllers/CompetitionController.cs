@@ -16,10 +16,10 @@ namespace Projeto_ESFase2.Controllers
         private CompetitionFuntions _competitionFuntions;
         private List<ICompetitionObserver> _observers;
 
-        public CompetitionController(ES2Context context, CompetitionFuntions _competitionFuntions)
+        public CompetitionController(ES2Context context, CompetitionFuntions competitionFuntions)
         {
             _context = context;
-            _competitionFuntions = _competitionFuntions;
+            _competitionFuntions = competitionFuntions;
             _observers = new List<ICompetitionObserver>();
 
         }
@@ -162,7 +162,7 @@ namespace Projeto_ESFase2.Controllers
 
             foreach (var item in compNom)
             {
-                var NomComp = _context.Nominees.FirstOrDefault(n => n.Id == item.NomineeId);
+               var NomComp = _context.Nominees.FirstOrDefault(n => n.Id == item.NomineeId);
                nomIds.Add(NomComp);
             }
 
@@ -172,7 +172,6 @@ namespace Projeto_ESFase2.Controllers
                 CompetitionId = competition.Id,
                 CompetitionName = competition.Name,
                 AvailableCompNom = nomIds,
-                AvailableNominees = availableNominee
 
             };
             return View(viewModel); 
@@ -198,7 +197,7 @@ namespace Projeto_ESFase2.Controllers
                 return NotFound();
             }
 
-            if (ModelState.IsValid)
+            if (ModelState.IsValid && userVoted.CompetitionUsers.Find(u => u.UserId == UsersServices.userId) == null)
             {
                 _competitionFuntions.incrementCompetitionNomineeNumberVotes(viewModel, competition);
                 _context.SaveChanges();
@@ -219,8 +218,8 @@ namespace Projeto_ESFase2.Controllers
 
                 return RedirectToAction("Index", "Competition"); // Redirect to the desired action and controller
             }
-
-            return View(viewModel);
+            ViewData["Error"] = "You already voted on this competition!";
+            return View();
         }
 
         // GET: CompetitionController/Edit/5
