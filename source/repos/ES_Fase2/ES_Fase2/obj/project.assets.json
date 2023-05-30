@@ -2549,11 +2549,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Carlos Marques\\source\\repos\\ES_Fase2\\ES_Fase2\\ES_Fase2.csproj",
+      "projectUniqueName": "C:\\Users\\Carlos Marques\\Source\\Repos\\ES_Projeto\\source\\repos\\ES_Fase2\\ES_Fase2\\ES_Fase2.csproj",
       "projectName": "ES_Fase2",
-      "projectPath": "C:\\Users\\Carlos Marques\\source\\repos\\ES_Fase2\\ES_Fase2\\ES_Fase2.csproj",
+      "projectPath": "C:\\Users\\Carlos Marques\\Source\\Repos\\ES_Projeto\\source\\repos\\ES_Fase2\\ES_Fase2\\ES_Fase2.csproj",
       "packagesPath": "C:\\Users\\Carlos Marques\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Carlos Marques\\source\\repos\\ES_Fase2\\ES_Fase2\\obj\\",
+      "outputPath": "C:\\Users\\Carlos Marques\\Source\\Repos\\ES_Projeto\\source\\repos\\ES_Fase2\\ES_Fase2\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
