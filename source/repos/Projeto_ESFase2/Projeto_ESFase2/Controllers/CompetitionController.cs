@@ -283,7 +283,8 @@ namespace Projeto_ESFase2.Controllers
         {
             var nomIds = new List<Nominee>();
             var compNomVotes = new List<CompetitionNominee>();
-            var competition = await _context.Competitions.Include(c => c.CompetitionNominees).ThenInclude(cn => cn.Nominee).FirstOrDefaultAsync(c => c.Id == Id);
+            var competition = await _context.Competitions.Include(c => c.CompetitionNominees)
+                                                         .ThenInclude(cn => cn.Nominee).FirstOrDefaultAsync(c => c.Id == Id);
             var compNom = competition.CompetitionNominees.Where(cn => cn.CompetitionId == Id);
 
             if (Id == null || _context.Competitions == null)
