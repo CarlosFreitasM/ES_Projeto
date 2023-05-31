@@ -17,7 +17,7 @@
     <div class="col-md-4">
         @ViewData["Error"]
         @ViewData["ErrorNomi"]
-        <a asp-action="Index">View Nominee List</a>
+
         <form asp-action="Create">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
@@ -49,7 +49,7 @@
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Index">View Nominee List</a>
 </div>
 
 @section Scripts {
