@@ -69,6 +69,8 @@ namespace Projeto_ESFase2.Controllers
                 CompetitionId = competition.Id,
 
                 CompetitionName = competition.Name,
+
+                CompetitionCategory = competition.Category,
                 
                 AvailableNominee = availableNominee
             };

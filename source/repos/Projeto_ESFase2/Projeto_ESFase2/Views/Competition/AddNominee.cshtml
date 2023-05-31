@@ -15,6 +15,7 @@
 <h1><b>Add Nominee</b></h1>
 
 <h4><b>Competition Name:</b> @Model.CompetitionName</h4>
+<h5><b>Competition Name:</b> @Model.CompetitionCategory</h5>
 <div class="row">
     <div class="col-md-4">
         <form asp-controller="Competition" asp-action="AddNominee" >
@@ -23,6 +24,8 @@
             <span asp-validation-for="CompetitionId" class="text-danger"></span>
             <input type="hidden" asp-for="CompetitionName" />
             <span asp-validation-for="CompetitionName" class="text-danger"></span>
+            <input type="hidden" asp-for="CompetitionCategory" />
+            <span asp-validation-for="CompetitionCategory" class="text-danger"></span>
             <input type="hidden" asp-for="AvailableNominee" />
             <span asp-validation-for="AvailableNominee" class="text-danger"></span>
 
