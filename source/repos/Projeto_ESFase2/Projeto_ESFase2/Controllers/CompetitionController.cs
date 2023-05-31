@@ -59,10 +59,23 @@ namespace Projeto_ESFase2.Controllers
 
         // GET: CompetitionController/AddNominee
         public async Task<ActionResult> AddNominee(int Id)
-        {
+        { 
+            var nomIds = new List<Nominee>();
+        
             var competition = _context.Competitions.Include(c => c.CompetitionNominees).ThenInclude(cn => cn.Nominee).FirstOrDefault(c => c.Id == Id);
             
             var availableNominee = await _context.Nominees.ToListAsync();
+
+            var compNom = competition.CompetitionNominees.Where(cn => cn.CompetitionId == Id);
+
+            //Iterator
+            foreach (var item in compNom)
+            {
+                var NomComp = _context.Nominees.FirstOrDefault(n => n.Id == item.NomineeId);
+                nomIds.Add(NomComp);
+            }
+
+            var trueAvailableNominees = availableNominee.Except(nomIds).ToList();
 
             var viewModel = new AddNomineeViewModel
             {
@@ -72,7 +85,7 @@ namespace Projeto_ESFase2.Controllers
 
                 CompetitionCategory = competition.Category,
                 
-                AvailableNominee = availableNominee
+                AvailableNominee = trueAvailableNominees
             };
 
             return View(viewModel);

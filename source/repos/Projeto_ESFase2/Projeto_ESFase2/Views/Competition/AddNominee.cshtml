@@ -34,6 +34,8 @@
                 <select asp-for="SelectedNomineeIds" asp-items="@Model.AvailableNominee.Select(c => new SelectListItem { Value = c.Id.ToString(), Text = c.Name + " | " + c.Type})" class="form-control"></select>
                 <span asp-validation-for="SelectedNomineeIds" class="text-danger"></span>
             </div>
+ 
+
 
             <div class="form-group">
                 <input type="submit" value="Add Nominee" class="btn btn-dark" />
