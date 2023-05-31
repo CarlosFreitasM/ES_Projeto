@@ -1,5 +1,5 @@
 ﻿@model IEnumerable<Projeto_ESFase2.Models.Nominee>
-
+@using Projeto_ESFase2.Services;
 @{
     ViewData["Title"] = "Index";
     Layout = "_UserAuthenticated";
@@ -37,11 +37,16 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Type)
             </td>
-            <td>
-                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
+            @if(UsersServices.isAdmin)
+                {
+                    <td>
+
+                        <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                    </td>
+                }
+               
         </tr>
 }
     </tbody>

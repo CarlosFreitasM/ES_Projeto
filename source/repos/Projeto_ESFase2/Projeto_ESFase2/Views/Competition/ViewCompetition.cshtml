@@ -1,4 +1,5 @@
 ﻿@model Projeto_ESFase2.Models.CompetitionViewModel
+@using Projeto_ESFase2.Services
 @{
     ViewData["Title"] = "ViewCompetition";
     var URLId = ViewContext.RouteData.Values["id"];
@@ -6,47 +7,53 @@
 }
 
 <h1>View Nominee</h1>
+@if (UsersServices.userName == null)
+{
+    <p>You need to log in to be able to vote on any competition</p>    
 
-<h2>View Competition: @Model.CompetitionName </h2>
-<div class="row">
-    <div class="col-md-4">
-        <form asp-controller="Competition" asp-action="VoteNominee">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="CompetitionId" />
+}
+else
+{
+    <h2>View Competition: @Model.CompetitionName </h2>
+    <div class="row">
+        <div class="col-md-4">
+            <form asp-controller="Competition" asp-action="VoteNominee">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <input type="hidden" asp-for="CompetitionId" />
 
-            <span asp-validation-for="CompetitionId" class="text-danger"></span>
-             <br>
-            <input type="hidden" asp-for="CompetitionName" />
-            <span asp-validation-for="CompetitionName" class="text-danger"></span>
-            <br>
-            <div class="form-group">
-            @foreach (var item in Model.AvailableCompNom)
-            {
-                    <div>
-                        <input type="radio" asp-for="SelectedNominee" name="SelectedNominee" value="@item.Id" /> @item.Name
-                        <span asp-validation-for="SelectedNominee" class="text-danger"></span>
-                    </div>
-            }
-            </div>
-            <input type="hidden" asp-for="AvailableCompNom" />
-            <span asp-validation-for="AvailableCompNom" class="text-danger"></span>
-
-            @if (Model.AvailableCompNom.Count() <= 0)
-            {
-                <p>Please add some Nominees before the competition starts!</p>
-
-            }
-            else
-            {
+                <span asp-validation-for="CompetitionId" class="text-danger"></span>
+                 <br>
+                <input type="hidden" asp-for="CompetitionName" />
+                <span asp-validation-for="CompetitionName" class="text-danger"></span>
+                <br>
                 <div class="form-group">
-                    <input type="submit" value="Vote Nominee" class="btn btn-primary" />
+                @foreach (var item in Model.AvailableCompNom)
+                {
+                        <div>
+                            <input type="radio" asp-for="SelectedNominee" name="SelectedNominee" value="@item.Id" /> @item.Name
+                            <span asp-validation-for="SelectedNominee" class="text-danger"></span>
+                        </div>
+                }
                 </div>
-            }
-            
-        </form>
-    </div>
-</div>
+                <input type="hidden" asp-for="AvailableCompNom" />
+                <span asp-validation-for="AvailableCompNom" class="text-danger"></span>
 
+                @if (Model.AvailableCompNom.Count() <= 0)
+                {
+                    <p>Please add some Nominees before the competition starts!</p>
+
+                }
+                else
+                {
+                    <div class="form-group">
+                        <input type="submit" value="Vote Nominee" class="btn btn-primary" />
+                    </div>
+                }
+            
+            </form>
+        </div>
+    </div>
+}
 
 @section Scripts {
     @{
