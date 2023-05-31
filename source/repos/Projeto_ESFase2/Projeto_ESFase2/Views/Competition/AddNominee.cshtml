@@ -15,7 +15,6 @@
 <h1><b>Add Nominee</b></h1>
 
 <h4><b>Competition Name:</b> @Model.CompetitionName</h4>
-<h5><b>Competition Name:</b> @Model.CompetitionCategory</h5>
 <div class="row">
     <div class="col-md-4">
         <form asp-controller="Competition" asp-action="AddNominee" >
@@ -30,7 +29,6 @@
             <span asp-validation-for="AvailableNominee" class="text-danger"></span>
 
             <div class="form-group">
-                <label asp-for="SelectedNomineeIds" class="control-label">Select Course:</label>
                 <select asp-for="SelectedNomineeIds" asp-items="@Model.AvailableNominee.Select(c => new SelectListItem { Value = c.Id.ToString(), Text = c.Name + " | " + c.Type})" class="form-control"></select>
                 <span asp-validation-for="SelectedNomineeIds" class="text-danger"></span>
             </div>

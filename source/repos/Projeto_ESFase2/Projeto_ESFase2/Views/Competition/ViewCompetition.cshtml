@@ -5,8 +5,7 @@
     var URLId = ViewContext.RouteData.Values["id"];
     Layout = "_UserAuthenticated";
 }
-
-<h1>View Nominee</h1>
+<h1><b>Category:</b> @Model.CompetitionName </h1>
 @if (UsersServices.userName == null)
 {
     <p>You need to log in to be able to vote on any competition</p>    
@@ -14,7 +13,7 @@
 }
 else
 {
-    <h2>View Competition: @Model.CompetitionName </h2>
+    <h2>Nominees:</h2>
     <div class="row">
         <div class="col-md-4">
             <form asp-controller="Competition" asp-action="VoteNominee">
@@ -46,7 +45,8 @@ else
                 else
                 {
                     <div class="form-group">
-                        <input type="submit" value="Vote Nominee" class="btn btn-primary" />
+                        <br>
+                        <input type="submit" value="Vote Nominee" class="btn btn-dark" />
                     </div>
                 }
             
