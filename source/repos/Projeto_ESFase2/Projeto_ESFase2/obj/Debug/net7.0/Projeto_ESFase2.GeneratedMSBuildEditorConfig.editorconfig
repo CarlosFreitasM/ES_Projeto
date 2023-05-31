@@ -56,40 +56,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGV0aXRpb25cVm90ZU5vbWluZWUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Carlos Marques/source/repos/FinalES/source/repos/Projeto_ESFase2/Projeto_ESFase2/Views/Comp/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcFxDcmVhdGUuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Carlos Marques/source/repos/FinalES/source/repos/Projeto_ESFase2/Projeto_ESFase2/Views/Comp/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcFxEZWxldGUuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Carlos Marques/source/repos/FinalES/source/repos/Projeto_ESFase2/Projeto_ESFase2/Views/Comp/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcFxEZXRhaWxzLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Carlos Marques/source/repos/FinalES/source/repos/Projeto_ESFase2/Projeto_ESFase2/Views/Comp/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcFxFZGl0LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Carlos Marques/source/repos/FinalES/source/repos/Projeto_ESFase2/Projeto_ESFase2/Views/Comp/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcFxJbmRleC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/Carlos Marques/source/repos/FinalES/source/repos/Projeto_ESFase2/Projeto_ESFase2/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Carlos Marques/source/repos/FinalES/source/repos/Projeto_ESFase2/Projeto_ESFase2/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Carlos Marques/source/repos/FinalES/source/repos/Projeto_ESFase2/Projeto_ESFase2/Views/Nominee/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm9taW5lZVxDcmVhdGUuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Carlos Marques/source/repos/FinalES/source/repos/Projeto_ESFase2/Projeto_ESFase2/Views/Nominee/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTm9taW5lZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Carlos Marques/source/repos/FinalES/source/repos/Projeto_ESFase2/Projeto_ESFase2/Views/Nomi/Create.cshtml]

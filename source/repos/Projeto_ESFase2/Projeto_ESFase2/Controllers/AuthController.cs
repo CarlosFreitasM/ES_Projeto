@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Projeto_ESFase2.Data;
-using Projeto_ESFase2.DTO;
+
 using Projeto_ESFase2.Models;
 using System.IO;
 using System.Text;
@@ -17,14 +17,14 @@ namespace Projeto_ESFase2.Controllers
     {
         private readonly ES2Context _context;
         private readonly UserServices _userServices;
-        private readonly AuthenticationServices _authenticationServices;
 
 
-        public AuthController(ES2Context context, UserServices userServices, AuthenticationServices authenticationServices)
+
+        public AuthController(ES2Context context, UserServices userServices)
         {
             _context = context;
             _userServices = userServices;
-            _authenticationServices = authenticationServices;
+
 
 
         }

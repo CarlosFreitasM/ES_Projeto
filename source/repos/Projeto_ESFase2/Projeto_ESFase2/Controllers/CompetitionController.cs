@@ -5,7 +5,6 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using NuGet.Packaging.Signing;
 using Projeto_ESFase2.Data;
-using Projeto_ESFase2.DTO;
 using Projeto_ESFase2.Models;
 using Projeto_ESFase2.Services;
 using System.Linq;
