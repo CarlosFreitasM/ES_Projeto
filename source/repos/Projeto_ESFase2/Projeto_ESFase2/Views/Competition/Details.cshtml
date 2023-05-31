@@ -2,11 +2,12 @@
 @{
     ViewData["Title"] = "Details";
     var URLId = ViewContext.RouteData.Values["id"];
+    Layout = "_UserAuthenticated";
 }
 
-<h1>Details</h1>
+<h1><b>Results</b></h1>
 
-<h2>View Competition: @Model.CompetitionName Model </h2>
+<h4><b>Competition:</b> @Model.CompetitionName </h4>
 <table class="table">
     <thead>
         <tr>

@@ -23,14 +23,17 @@
             <span asp-validation-for="CompetitionId" class="text-danger"></span>
             <input type="hidden" asp-for="CompetitionName" />
             <span asp-validation-for="CompetitionName" class="text-danger"></span>
+            <input type="hidden" asp-for="CompetitionCategory" />
+            <span asp-validation-for="CompetitionCategory" class="text-danger"></span>
             <input type="hidden" asp-for="AvailableNominee" />
             <span asp-validation-for="AvailableNominee" class="text-danger"></span>
 
             <div class="form-group">
-                <label asp-for="SelectedNomineeIds" class="control-label">Select Course:</label>
                 <select asp-for="SelectedNomineeIds" asp-items="@Model.AvailableNominee.Select(c => new SelectListItem { Value = c.Id.ToString(), Text = c.Name + " | " + c.Type})" class="form-control"></select>
                 <span asp-validation-for="SelectedNomineeIds" class="text-danger"></span>
             </div>
+ 
+
 
             <div class="form-group">
                 <input type="submit" value="Add Nominee" class="btn btn-dark" />

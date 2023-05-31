@@ -2,13 +2,9 @@
 {
     public class LoginUserData
     {
-        public static string UserSession { get; set; }
-        public static int UserId { get; }
+        public int Id { get; set; }
+        public string UserName { get; set; }
+        public bool IsAdmin { get; set; }
 
-        public LoginUserData(string userSession, int userId) 
-        {
-            UserSession = userSession;
-  
-        }
     }
 }

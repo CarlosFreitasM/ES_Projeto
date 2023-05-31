@@ -54,21 +54,29 @@ namespace Projeto_ESFase2.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([FromForm] Nominee nominee)
         {
-            
+            var addingNominee = await _context.Nominees.ToListAsync();
           
             if (ModelState.IsValid)
             {
+                foreach (var item in addingNominee)
+                {
+                    if (item.Name == nominee.Name)
+                    {
+                        ViewData["ErrorNomi"] = "This nominee name is already on the data base";
+                        return View();
+                    }
+                }
                 _context.Add(nominee);
                 await _context.SaveChangesAsync();
                 return RedirectToAction("Index", "Nomi");
             }
             
-            ViewData["Error"] = "Algo correu errado";
+            ViewData["Error"] = "Something went wrong!";
             return View();
         }
 
         // GET: Nomi/Edit/5
-        public async Task<IActionResult> Edit(int? id)
+        public async Task<IActionResult> Edit(int id)
         {
             if (id == null || _context.Nominees == null)
             {
@@ -88,7 +96,7 @@ namespace Projeto_ESFase2.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("NomineeID,Name,Description,Type")] Nominee nominee)
+        public async Task<IActionResult> Edit(int id, [FromForm] Nominee nominee)
         {
             if (id != nominee.Id)
             {

@@ -26,6 +26,12 @@ namespace Projeto_ESFase2.Controllers
             return View();
         }
 
+        [HttpGet]
+        public RedirectResult NotAuthenticated()
+        { 
+            return Redirect("Auth/Login");
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

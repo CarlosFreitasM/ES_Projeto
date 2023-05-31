@@ -20,7 +20,7 @@
             isAdmin = admin;
         }
 
-        public static void setUserInfo(int id,  string username, string email, bool admin)
+        public static void setUserInfo(int id, string username, string email, bool admin)
         {
             userId = id;
             userName = username;

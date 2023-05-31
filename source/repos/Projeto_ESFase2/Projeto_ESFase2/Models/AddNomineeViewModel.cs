@@ -7,6 +7,7 @@ namespace Projeto_ESFase2.Models
     {
         public int CompetitionId { get; set; }
         public string CompetitionName { get; set; }
+        public string CompetitionCategory { get; set; }
         public int SelectedNomineeIds { get; set; }
         public List<Nominee> AvailableNominee { get; set; }
     }
