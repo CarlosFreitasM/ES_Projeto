@@ -285,20 +285,6 @@ namespace Projeto_ESFase2.Controllers
             }
         }
 
-        public List<GroupedNominee> Showgroup()
-        {
-            List<Nominee> items = _context.Nominees.ToList();
-
-            var groupedItems = items.GroupBy(x => x.Type)
-                                    .Select(g => new GroupedNominee
-                                    {
-                                        NomineeType = g.Key,   
-                                        Items = g.ToList()
-                                    })
-                                    .ToList();
-            return groupedItems;
-        }
-
         public async Task<ActionResult> Details(int Id)
         {
             try
