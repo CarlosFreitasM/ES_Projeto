@@ -16,15 +16,19 @@ namespace Projeto_ESFase2.Controllers
     public class AuthController : Controller
     {
         private readonly ES2Context _context;
-        private readonly User _user;
+        private readonly UserServices _userServices;
+        private readonly AuthenticationServices _authenticationServices;
 
-        public AuthController(ES2Context context)
+
+        public AuthController(ES2Context context, UserServices userServices, AuthenticationServices authenticationServices)
         {
             _context = context;
+            _userServices = userServices;
+            _authenticationServices = authenticationServices;
 
-            
+
         }
-
+        
         public void Update(IObservable observable)
         {
             if (observable == null)
@@ -42,6 +46,7 @@ namespace Projeto_ESFase2.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Login(IFormCollection user)
         {
+            List<User> users = new List<User>();
             var iterateUsers = await _context.Users.ToListAsync();
 
 
@@ -49,6 +54,7 @@ namespace Projeto_ESFase2.Controllers
             {
                 if (item.Email == user["Email"] && item.Password == Encrypt(user["Password"]))
                 {
+                    
                     _context.Update(item);
                     await _context.SaveChangesAsync();
                     UsersServices.setUserInfo(item.Id, item.Name, item.Email, item.IsAdmin);

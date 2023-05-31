@@ -31,10 +31,18 @@
             <input type="hidden" asp-for="AvailableCompNom" />
             <span asp-validation-for="AvailableCompNom" class="text-danger"></span>
 
+            @if (Model.AvailableCompNom.Count() <= 0)
+            {
+                <p>Please add some Nominees before the competition starts!</p>
 
-            <div class="form-group">
-                <input type="submit" value="Vote Nominee" class="btn btn-primary" />
-            </div>
+            }
+            else
+            {
+                <div class="form-group">
+                    <input type="submit" value="Vote Nominee" class="btn btn-primary" />
+                </div>
+            }
+            
         </form>
     </div>
 </div>

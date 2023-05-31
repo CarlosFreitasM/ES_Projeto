@@ -15,5 +15,7 @@ namespace Projeto_ESFase2.Models
 
         public List<Nominee> AvailableCompNom { get; set; }
 
+        public long TotalVotes { get; set; }
+
     }
 }

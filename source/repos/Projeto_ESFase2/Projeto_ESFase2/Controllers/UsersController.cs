@@ -10,7 +10,7 @@ using Projeto_ESFase2.Models;
 
 namespace Projeto_ESFase2.Controllers
 {
-    public class UsersController : Controller
+    public class UsersController : Controller, ICompetitionObserver
     {
         private readonly ES2Context _context;
 
@@ -21,7 +21,7 @@ namespace Projeto_ESFase2.Controllers
 
         public void Update(string message)
         {
-            ViewData["Notification"] = message;
+            ViewData["Notification"] = "A new competition has started! " + message;
         }
 
         // GET: Users

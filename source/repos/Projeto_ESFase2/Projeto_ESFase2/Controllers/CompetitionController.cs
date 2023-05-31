@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using NuGet.Packaging.Signing;
 using Projeto_ESFase2.Data;
+using Projeto_ESFase2.DTO;
 using Projeto_ESFase2.Models;
 using Projeto_ESFase2.Services;
 using System.Linq;
@@ -15,13 +16,18 @@ namespace Projeto_ESFase2.Controllers
     {
         private readonly ES2Context _context;
         private CompetitionFuntions _competitionFuntions;
+        private Iterator _iterator;
+        private UserServices _userServices;
         private List<ICompetitionObserver> _observers;
 
-        public CompetitionController(ES2Context context, CompetitionFuntions competitionFuntions)
+
+        public CompetitionController(ES2Context context, CompetitionFuntions competitionFuntions, Iterator iterator, UserServices userServices)
         {
             _context = context;
             _competitionFuntions = competitionFuntions;
+            _iterator = iterator;
             _observers = new List<ICompetitionObserver>();
+            _userServices = userServices;
 
         }
 
@@ -45,7 +51,7 @@ namespace Projeto_ESFase2.Controllers
         // GET: CompetitionController
         public ActionResult Index()
         {
-
+           
             return View(_context.Competitions.ToList());
 
         }
@@ -281,45 +287,39 @@ namespace Projeto_ESFase2.Controllers
 
         public async Task<ActionResult> Details(int Id)
         {
-            var nomIds = new List<Nominee>();
-            var compNomVotes = new List<CompetitionNominee>();
-            var competition = await _context.Competitions.Include(c => c.CompetitionNominees)
-                                                         .ThenInclude(cn => cn.Nominee).FirstOrDefaultAsync(c => c.Id == Id);
-            var compNom = competition.CompetitionNominees.Where(cn => cn.CompetitionId == Id);
-
-            if (Id == null || _context.Competitions == null)
+            try
             {
-                return NotFound();
+                var nomIds = new List<Nominee>();
+                var compNomVotes = new List<CompetitionNominee>();
+                var competition = await _context.Competitions.Include(c => c.CompetitionNominees)
+                                                             .ThenInclude(cn => cn.Nominee).FirstOrDefaultAsync(c => c.Id == Id);
+                var compNom = competition.CompetitionNominees.Where(cn => cn.CompetitionId == Id);
+
+                foreach (var item in compNom)
+                {
+                    var NomComp = _context.Nominees.FirstOrDefault(n => n.Id == item.NomineeId);
+                    nomIds.Add(NomComp);
+                }
+
+                foreach (var item in nomIds)
+                {
+                    var NomComp = competition.CompetitionNominees.FirstOrDefault(n => n.NomineeId == item.Id);
+                    compNomVotes.Add(NomComp);
+                }
+
+                var viewModel = new CompetitionResultViewModel
+                {
+
+                    CompetitionName = competition.Name,
+                    TotalVotes = competition.NumberVotes,
+                    AvailableCompNom = nomIds,
+                    NumberOfVotesPer = compNomVotes
+
+                };
+
+                return View(viewModel);
             }
-
-            if (competition == null)
-            {
-                return NotFound();
-            }
-
-            foreach (var item in compNom)
-            {
-                var NomComp = _context.Nominees.FirstOrDefault(n => n.Id == item.NomineeId);
-                nomIds.Add(NomComp);
-            }
-
-            foreach (var item in nomIds)
-            {
-                var NomComp = competition.CompetitionNominees.FirstOrDefault(n => n.NomineeId == item.Id);
-                compNomVotes.Add(NomComp);
-            }
-
-            var viewModel = new CompetitionResultViewModel
-            {
-
-                CompetitionName = competition.Name,
-                TotalVotes = competition.NumberVotes,
-                AvailableCompNom = nomIds,
-                NumberOfVotesPer = compNomVotes
-
-            };
-
-            return View(viewModel);
+            catch (Exception ex) { return NotFound(); }
         }
     }
 }

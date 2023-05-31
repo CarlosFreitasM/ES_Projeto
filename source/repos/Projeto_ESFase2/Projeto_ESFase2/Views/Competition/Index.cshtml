@@ -16,7 +16,7 @@
 
 <h1><b>Categories</b></h1>
 
-@if (@UsersServices.isAdmin==true)
+@if (@UsersServices.isAdmin == true)
 {
     <p>
         <a asp-action="Create">Create New Category</a>
@@ -48,8 +48,7 @@
     <tbody>
 
 @foreach (var item in Model) {
-            @if (DateTime.Now < item.ClosingTime && !@UsersServices.isAdmin)
-            {
+
                 <tr>
                     <td>
                         @Html.DisplayFor(modelItem => item.Name)
@@ -67,29 +66,9 @@
                         @Html.DisplayFor(modelItem => item.StartingTime)
                     </td>
 
-                </tr>
-            }        
-            @if (@UsersServices.isAdmin)
+                @if (@UsersServices.isAdmin)
             {
-                <tr>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Name)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Category)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.NumberVotes)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.ClosingTime)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.StartingTime)
-                        </td>
-
-                    
-                <td>
+                    <td>
                         
                                 <a asp-action="AddNominee"  asp-route-id="@item.Id">Add Nominee</a> |
                                 <form method="post" asp-controller="Competition" asp-action="Delete" asp-route-id="@item.Id">
@@ -97,11 +76,12 @@
                     </form>
 
                     </td>
-                </tr>
+                
                 
             }
+            </tr>
             <td>
-                @if (item.ClosingTime < DateTime.Now || UsersServices.isAdmin)
+                @if (item.ClosingTime < DateTime.Now || @UsersServices.isAdmin)
                 {
                     
                             <a asp-action="Details" asp-route-id="@item.Id">Results</a>
